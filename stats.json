@@ -1,0 +1,11 @@
+{
+  "total_trades": 1260,
+  "win_rate": 46.0,
+  "cumulative_pnl": 279.4,
+  "profit_factor": 1.11,
+  "sharpe": 0.03,
+  "sortino": 0.05,
+  "max_drawdown": -12.4,
+  "version": "18.18",
+  "last_updated": "Feb 7, 2026 · 4:15 PM"
+}

@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HoopHedge — Automated Trading Signals</title>
+<meta name="description" content="Automated trading signal system — Swing trading with AI-powered analysis">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏀</text></svg>">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap');
+
+  :root {
+    --bg: #191919;
+    --surface: #252525;
+    --surface2: #2a2a2a;
+    --surface3: #303030;
+    --border: #333;
+    --border-hover: #444;
+    --text: #e0e0e0;
+    --text-dim: #888;
+    --text-faint: #555;
+    --accent-green: #2ecc71;
+    --accent-blue: #5b9bd5;
+    --accent-orange: #e67e22;
+    --accent-red: #e74c3c;
+    --accent-purple: #9b59b6;
+    --accent-teal: #00cec9;
+    --tag-green-bg: #1a3a2a;
+    --tag-green-text: #4cd97b;
+    --tag-blue-bg: #1a2a3a;
+    --tag-blue-text: #6bb3e8;
+    --tag-purple-bg: #2a1a3a;
+    --tag-purple-text: #b87ee8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', -apple-system, sans-serif;
+    font-size: 15px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Page layout */
+  .page {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 60px 100px;
+  }
+
+  @media (max-width: 700px) {
+    .page { padding: 0 20px 60px; }
+    .cover { height: 120px !important; }
+    .page-icon { font-size: 48px !important; margin-top: -24px !important; }
+    .page-title { font-size: 28px !important; }
+    .stats-grid { grid-template-columns: 1fr 1fr !important; }
+    .stats-row-2 { grid-template-columns: 1fr 1fr 1fr !important; }
+    .about-grid { grid-template-columns: 1fr !important; }
+    .flow { flex-wrap: wrap; justify-content: center; }
+    .flow-arrow { display: none; }
+    .link-grid { grid-template-columns: 1fr !important; }
+  }
+
+  /* Cover */
+  .cover {
+    height: 180px;
+    background: linear-gradient(135deg, #0a1628 0%, #162442 30%, #1a3a2a 70%, #0a1a0a 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  .cover::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 20% 50%, rgba(46, 204, 113, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 30%, rgba(91, 155, 213, 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 50% 80%, rgba(155, 89, 182, 0.05) 0%, transparent 50%);
+  }
+  .cover::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+    opacity: 0.4;
+  }
+
+  /* Header */
+  .page-icon {
+    font-size: 64px;
+    margin-top: -32px;
+    margin-bottom: 12px;
+    position: relative;
+    z-index: 1;
+  }
+  .page-title {
+    font-family: 'Newsreader', Georgia, serif;
+    font-size: 38px;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    color: #fff;
+    margin-bottom: 4px;
+  }
+  .page-subtitle {
+    color: var(--text-dim);
+    font-size: 14px;
+    margin-bottom: 36px;
+    font-style: italic;
+  }
+
+  /* Section headers */
+  .divider { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
+
+  h2 {
+    font-family: 'Newsreader', Georgia, serif;
+    font-size: 22px;
+    font-weight: 500;
+    color: #fff;
+    margin: 0 0 16px;
+    letter-spacing: -0.3px;
+  }
+
+  p { margin-bottom: 12px; }
+
+  /* About cards */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+    margin: 16px 0;
+  }
+  .about-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 20px 16px;
+    text-align: center;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .about-card:hover { border-color: var(--border-hover); transform: translateY(-2px); }
+  .about-card-icon { font-size: 28px; margin-bottom: 10px; }
+  .about-card-title { font-weight: 600; font-size: 14px; color: #fff; margin-bottom: 6px; }
+  .about-card-desc { font-size: 12px; color: var(--text-dim); line-height: 1.5; }
+
+  /* Stats */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin: 16px 0;
+  }
+  .stat-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 20px 16px;
+    text-align: center;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .stat-card:hover { border-color: var(--border-hover); transform: translateY(-2px); }
+  .stat-value {
+    font-family: 'DM Mono', monospace;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    color: #fff;
+    transition: opacity 0.3s;
+  }
+  .stat-value.green { color: var(--accent-green); }
+  .stat-value.red { color: var(--accent-red); }
+  .stat-value.blue { color: var(--accent-blue); }
+  .stat-value.teal { color: var(--accent-teal); }
+  .stat-value.orange { color: var(--accent-orange); }
+  .stat-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-dim);
+    margin-top: 8px;
+  }
+
+  .stats-row-2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 12px;
+  }
+
+  .stats-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 14px;
+    font-size: 12px;
+    color: var(--text-faint);
+  }
+  .auto-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 4px 12px;
+    font-size: 11px;
+    color: var(--text-dim);
+  }
+  .version-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: var(--tag-blue-bg);
+    border-radius: 20px;
+    padding: 4px 12px;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--tag-blue-text);
+  }
+
+  /* Flow diagram */
+  .flow {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    margin: 18px 0;
+    overflow-x: auto;
+    padding-bottom: 4px;
+  }
+  .flow-step {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 18px;
+    text-align: center;
+    min-width: 115px;
+    flex-shrink: 0;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .flow-step:hover { border-color: var(--border-hover); transform: translateY(-2px); }
+  .flow-step-icon { font-size: 22px; margin-bottom: 6px; }
+  .flow-step-label { font-size: 12px; font-weight: 600; color: #fff; }
+  .flow-step-sub { font-size: 10px; color: var(--text-dim); margin-top: 3px; }
+  .flow-arrow { color: var(--text-faint); font-size: 18px; flex-shrink: 0; padding: 0 5px; }
+
+  /* Changelog placeholder */
+  .changelog-embed {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 16px 0;
+  }
+  .changelog-header {
+    background: var(--surface);
+    padding: 12px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-dim);
+    border-bottom: 1px solid var(--border);
+  }
+  .changelog-link {
+    font-size: 12px;
+    color: var(--accent-blue);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .changelog-link:hover { text-decoration: underline; }
+  .changelog-body { padding: 0; }
+  .changelog-item {
+    display: grid;
+    grid-template-columns: 80px 70px 1fr;
+    padding: 10px 18px;
+    font-size: 13px;
+    border-bottom: 1px solid var(--border);
+    align-items: center;
+  }
+  .changelog-item:last-child { border-bottom: none; }
+  .changelog-version {
+    font-family: 'DM Mono', monospace;
+    font-weight: 600;
+    font-size: 12px;
+    color: var(--tag-blue-text);
+  }
+  .changelog-section {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+  }
+  .changelog-section.fixed { color: var(--accent-blue); }
+  .changelog-section.added { color: var(--accent-green); }
+  .changelog-section.changed { color: var(--accent-orange); }
+  .changelog-change { color: var(--text); }
+
+  /* Link cards */
+  .link-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 16px 0;
+  }
+  .link-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 18px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s, transform 0.2s;
+    text-decoration: none;
+    color: var(--text);
+  }
+  .link-card:hover { background: var(--surface2); border-color: var(--border-hover); transform: translateY(-1px); }
+  .link-card-icon {
+    font-size: 22px;
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--surface2);
+    border-radius: 8px;
+  }
+  .link-card-content { flex: 1; }
+  .link-card-title { font-weight: 600; font-size: 14px; color: #fff; }
+  .link-card-desc { font-size: 12px; color: var(--text-dim); margin-top: 3px; }
+
+  /* Loading skeleton */
+  .loading .stat-value {
+    background: var(--surface2);
+    color: transparent;
+    border-radius: 4px;
+    animation: pulse 1.5s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+
+  /* Fade in */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(12px);
+    animation: fadeUp 0.5s ease forwards;
+  }
+  @keyframes fadeUp {
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .fade-in:nth-child(2) { animation-delay: 0.05s; }
+  .fade-in:nth-child(3) { animation-delay: 0.1s; }
+  .fade-in:nth-child(4) { animation-delay: 0.15s; }
+  .fade-in:nth-child(5) { animation-delay: 0.2s; }
+  .fade-in:nth-child(6) { animation-delay: 0.25s; }
+  .fade-in:nth-child(7) { animation-delay: 0.3s; }
+
+  /* Footer */
+  .footer {
+    margin-top: 48px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    font-size: 12px;
+    color: var(--text-faint);
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<div class="cover"></div>
+
+<div class="page">
+
+  <div class="page-icon">🏀</div>
+  <div class="page-title">HoopHedge</div>
+  <div class="page-subtitle">Automated trading signal system — Swing trading with AI-powered analysis</div>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="fade-in">
+    <h2>👋 What is HoopHedge?</h2>
+    <p>HoopHedge is an automated trading signal system that combines technical analysis, sentiment analysis, and position management into a single pipeline. It scans thousands of stocks across multiple data sources, generates trading signals, and manages paper trading positions automatically.</p>
+
+    <div class="about-grid">
+      <div class="about-card">
+        <div class="about-card-icon">📡</div>
+        <div class="about-card-title">Multi-Source Scanning</div>
+        <div class="about-card-desc">Pulls trending tickers from Yahoo, Finviz, StockAnalysis, TradingView & more</div>
+      </div>
+      <div class="about-card">
+        <div class="about-card-icon">🧠</div>
+        <div class="about-card-title">AI Sentiment</div>
+        <div class="about-card-desc">FinBERT-powered news sentiment analysis for signal confirmation</div>
+      </div>
+      <div class="about-card">
+        <div class="about-card-icon">⚡</div>
+        <div class="about-card-title">Fully Automated</div>
+        <div class="about-card-desc">Scheduled scans with automated position sizing, stops & notifications</div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ============ PERFORMANCE ============ -->
+  <section class="fade-in">
+    <h2>📊 Performance</h2>
+
+    <div class="stats-grid loading" id="stats-grid">
+      <div class="stat-card">
+        <div class="stat-value" id="stat-trades">—</div>
+        <div class="stat-label">Total Trades</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value green" id="stat-winrate">—</div>
+        <div class="stat-label">Win Rate</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value green" id="stat-pnl">—</div>
+        <div class="stat-label">Cumulative P&L</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value blue" id="stat-pf">—</div>
+        <div class="stat-label">Profit Factor</div>
+      </div>
+    </div>
+
+    <div class="stats-row-2 loading" id="stats-row-2">
+      <div class="stat-card">
+        <div class="stat-value teal" id="stat-sharpe">—</div>
+        <div class="stat-label">Sharpe Ratio</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value teal" id="stat-sortino">—</div>
+        <div class="stat-label">Sortino Ratio</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value red" id="stat-dd">—</div>
+        <div class="stat-label">Max Drawdown</div>
+      </div>
+    </div>
+
+    <div class="stats-meta">
+      <span class="auto-badge">🔄 Auto-updated every scan</span>
+      <span>
+        <span class="version-badge" id="stat-version">—</span>
+        &nbsp;
+        <span id="stat-updated" style="color: var(--text-faint);">Loading...</span>
+      </span>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ============ HOW IT WORKS ============ -->
+  <section class="fade-in">
+    <h2>⚙️ How It Works</h2>
+    <p>HoopHedge runs scheduled scans throughout the trading day. Each scan pulls the latest watchlist, generates signals using multiple technical indicators, applies sentiment analysis, sizes positions, and executes trades automatically.</p>
+
+    <div class="flow">
+      <div class="flow-step">
+        <div class="flow-step-icon">📡</div>
+        <div class="flow-step-label">Watchlist Scraper</div>
+        <div class="flow-step-sub">5+ data sources</div>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">
+        <div class="flow-step-icon">📊</div>
+        <div class="flow-step-label">Signal Engine</div>
+        <div class="flow-step-sub">MACD · RSI · BB · Stoch</div>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">
+        <div class="flow-step-icon">🧠</div>
+        <div class="flow-step-label">Sentiment</div>
+        <div class="flow-step-sub">FinBERT NLP</div>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">
+        <div class="flow-step-icon">⚖️</div>
+        <div class="flow-step-label">Position Sizing</div>
+        <div class="flow-step-sub">Kelly + ATR</div>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">
+        <div class="flow-step-icon">🚀</div>
+        <div class="flow-step-label">Execution</div>
+        <div class="flow-step-sub">Automated trades</div>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">
+        <div class="flow-step-icon">📋</div>
+        <div class="flow-step-label">Tracking</div>
+        <div class="flow-step-sub">Sheets & Slack</div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ============ CHANGELOG ============ -->
+  <section class="fade-in">
+    <h2>📋 Recent Changes</h2>
+    <div class="changelog-embed">
+      <div class="changelog-header">
+        <span>📋 Hoop Hedge — Changelog</span>
+      </div>
+      <div class="changelog-body" id="changelog-body">
+        <div class="changelog-item">
+          <span class="changelog-version">v18.18</span>
+          <span class="changelog-section fixed">Fixed</span>
+          <span class="changelog-change">Portfolio-weighted Max Drawdown calculation</span>
+        </div>
+        <div class="changelog-item">
+          <span class="changelog-version">v18.18</span>
+          <span class="changelog-section fixed">Fixed</span>
+          <span class="changelog-change">Portfolio-weighted Sharpe Ratio</span>
+        </div>
+        <div class="changelog-item">
+          <span class="changelog-version">v18.18</span>
+          <span class="changelog-section fixed">Fixed</span>
+          <span class="changelog-change">Portfolio-weighted Sortino Ratio</span>
+        </div>
+        <div class="changelog-item">
+          <span class="changelog-version">v18.18</span>
+          <span class="changelog-section added">Added</span>
+          <span class="changelog-change">Zero-share position filter</span>
+        </div>
+        <div class="changelog-item">
+          <span class="changelog-version">v18.18</span>
+          <span class="changelog-section added">Added</span>
+          <span class="changelog-change">Watchlist scraper progress percentage</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ============ QUICK LINKS ============ -->
+  <section class="fade-in">
+    <h2>🔗 Quick Links</h2>
+    <div class="link-grid">
+      <a class="link-card" href="#">
+        <div class="link-card-icon">📋</div>
+        <div class="link-card-content">
+          <div class="link-card-title">Changelog</div>
+          <div class="link-card-desc">Version history & release notes</div>
+        </div>
+      </a>
+      <a class="link-card" href="#">
+        <div class="link-card-icon">🔬</div>
+        <div class="link-card-content">
+          <div class="link-card-title">Stock Analyzer</div>
+          <div class="link-card-desc">Companion fundamental analysis platform</div>
+        </div>
+      </a>
+      <a class="link-card" href="#">
+        <div class="link-card-icon">🛠</div>
+        <div class="link-card-content">
+          <div class="link-card-title">Tech Stack & Architecture</div>
+          <div class="link-card-desc">Tools, APIs, and system details</div>
+        </div>
+      </a>
+      <a class="link-card" href="#">
+        <div class="link-card-icon">📖</div>
+        <div class="link-card-content">
+          <div class="link-card-title">Documentation</div>
+          <div class="link-card-desc">Setup, operations, and reference</div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <div class="footer">
+    HoopHedge · Built with Python · Paper trading only
+  </div>
+
+</div>
+
+<script>
+  // Load stats from stats.json
+  async function loadStats() {
+    try {
+      const resp = await fetch('stats.json?' + Date.now());
+      if (!resp.ok) throw new Error('Failed to load stats');
+      const s = resp.json ? await resp.json() : null;
+      if (!s) return;
+
+      // Populate values
+      document.getElementById('stat-trades').textContent = s.total_trades.toLocaleString();
+      document.getElementById('stat-winrate').textContent = s.win_rate.toFixed(1) + '%';
+
+      const pnlEl = document.getElementById('stat-pnl');
+      pnlEl.textContent = (s.cumulative_pnl >= 0 ? '+' : '') + s.cumulative_pnl.toFixed(1) + '%';
+      pnlEl.className = 'stat-value ' + (s.cumulative_pnl >= 0 ? 'green' : 'red');
+
+      document.getElementById('stat-pf').textContent = s.profit_factor.toFixed(2);
+      document.getElementById('stat-sharpe').textContent = s.sharpe.toFixed(2);
+      document.getElementById('stat-sortino').textContent = s.sortino.toFixed(2);
+
+      const ddEl = document.getElementById('stat-dd');
+      ddEl.textContent = s.max_drawdown.toFixed(1) + '%';
+
+      document.getElementById('stat-version').textContent = 'v' + s.version;
+      document.getElementById('stat-updated').textContent = 'Last updated: ' + s.last_updated;
+
+      // Remove loading state
+      document.getElementById('stats-grid').classList.remove('loading');
+      document.getElementById('stats-row-2').classList.remove('loading');
+
+    } catch (err) {
+      console.warn('Could not load stats:', err);
+      document.getElementById('stat-updated').textContent = 'Stats unavailable';
+    }
+  }
+
+  loadStats();
+</script>
+
+</body>
+</html>
