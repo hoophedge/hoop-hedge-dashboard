@@ -73,7 +73,8 @@
     z-index: 1;
   }
 
-  .hero { text-align: center; margin-bottom: 56px; padding-top: 64px; }
+  /* ── Hero ── */
+  .hero { text-align: center; margin-bottom: 40px; padding-top: 64px; }
   .hero h1 {
     font-size: 48px; font-weight: 800; color: var(--white);
     letter-spacing: -1.5px; line-height: 1.1; margin-bottom: 16px;
@@ -86,17 +87,78 @@
     font-size: 17px; color: var(--text-dim);
     max-width: 540px; margin: 0 auto; font-weight: 300; line-height: 1.7;
   }
-
   .tagline {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 13px;
-    font-weight: 500;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: var(--text-dim);
-    margin-top: 20px;
+    font-size: 13px; font-weight: 500;
+    letter-spacing: 3px; text-transform: uppercase;
+    color: var(--text-dim); margin-top: 20px;
   }
 
+  /* ── Toggle ── */
+  .toggle-wrapper {
+    display: flex; justify-content: center;
+    margin-bottom: 48px;
+  }
+  .toggle-container {
+    display: flex;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 4px;
+    gap: 4px;
+  }
+  .toggle-btn {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding: 10px 24px;
+    border: none;
+    border-radius: 9px;
+    cursor: pointer;
+    background: transparent;
+    color: var(--text-dim);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+  }
+  .toggle-btn:hover:not(.active) {
+    color: var(--text);
+    background: var(--surface2);
+  }
+  .toggle-btn.active {
+    background: var(--surface3);
+    color: var(--white);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  }
+  .toggle-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 20%;
+    right: 20%;
+    height: 2px;
+    background: linear-gradient(90deg, var(--green), var(--cyan));
+    border-radius: 2px;
+  }
+
+  /* ── Dashboard Sections ── */
+  .dashboard { position: relative; }
+  .dashboard-view {
+    opacity: 0;
+    transform: translateY(12px);
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    pointer-events: none;
+    transition: opacity 0.35s ease, transform 0.35s ease;
+  }
+  .dashboard-view.active {
+    opacity: 1;
+    transform: translateY(0);
+    position: relative;
+    pointer-events: all;
+  }
+
+  /* ── Sections ── */
   .section { margin-bottom: 56px; }
   .section-header {
     display: flex; align-items: center; justify-content: space-between;
@@ -108,6 +170,7 @@
   }
   .section-meta { font-size: 12px; color: var(--text-faint); }
 
+  /* ── Stat Cards ── */
   .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
   .stat-card {
     background: var(--surface); border: 1px solid var(--border);
@@ -126,6 +189,8 @@
   .stat-card.red-accent::before { background: linear-gradient(90deg, var(--red), transparent); }
   .stat-card.blue-accent::before { background: linear-gradient(90deg, var(--blue), transparent); }
   .stat-card.cyan-accent::before { background: linear-gradient(90deg, var(--cyan), transparent); }
+  .stat-card.amber-accent::before { background: linear-gradient(90deg, var(--amber), transparent); }
+  .stat-card.purple-accent::before { background: linear-gradient(90deg, var(--purple), transparent); }
 
   .stat-label {
     font-size: 12px; font-weight: 500; color: var(--text-dim);
@@ -141,7 +206,14 @@
   .stat-value.blue { color: var(--blue); }
   .stat-value.cyan { color: var(--cyan); }
   .stat-value.amber { color: var(--amber); }
+  .stat-value.purple { color: var(--purple); }
 
+  .stat-sub {
+    font-size: 11px; color: var(--text-faint);
+    margin-top: 6px; font-weight: 400;
+  }
+
+  /* ── Footer elements ── */
   .stats-footer {
     display: flex; justify-content: space-between; align-items: center; margin-top: 16px;
   }
@@ -166,7 +238,13 @@
     font-size: 11px; font-weight: 600; color: var(--amber);
     background: var(--amber-dim); padding: 4px 10px; border-radius: 6px;
   }
+  .signals-badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; font-weight: 600; color: var(--cyan);
+    background: var(--cyan-dim); padding: 4px 10px; border-radius: 6px;
+  }
 
+  /* ── Footer ── */
   .footer {
     margin-top: 64px; padding: 24px 0;
     border-top: 1px solid var(--border);
@@ -174,27 +252,24 @@
     font-size: 12px; color: var(--text-faint);
   }
   .disclaimer {
-    display: block;
-    font-size: 11px;
-    line-height: 1.6;
-    color: var(--text-faint);
-    max-width: 480px;
+    display: block; font-size: 11px; line-height: 1.6;
+    color: var(--text-faint); max-width: 480px;
     margin: 0 auto 12px;
   }
   .footer-brand {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--text-dim);
+    font-size: 10px; letter-spacing: 2px;
+    text-transform: uppercase; color: var(--text-dim);
   }
 
+  /* ── Loading shimmer ── */
   .loading .stat-value {
     background: var(--surface2); color: transparent;
     border-radius: 6px; animation: shimmer 1.8s ease-in-out infinite;
   }
   @keyframes shimmer { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
 
+  /* ── Animations ── */
   .fade-in {
     opacity: 0; transform: translateY(16px);
     animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
@@ -206,6 +281,7 @@
   .delay-4 { animation-delay: 0.32s; }
   .delay-5 { animation-delay: 0.40s; }
 
+  /* ── Responsive ── */
   @media (max-width: 700px) {
     .container { padding: 0 16px; }
     .hero h1 { font-size: 32px; }
@@ -213,6 +289,7 @@
     .stats-grid { grid-template-columns: 1fr 1fr; }
     .section { margin-bottom: 40px; }
     .stat-value { font-size: 22px; }
+    .toggle-btn { padding: 8px 16px; font-size: 12px; }
   }
 </style>
 </head>
@@ -220,61 +297,131 @@
 
 <div class="container">
 
+  <!-- Hero -->
   <section class="hero fade-in delay-1">
     <h1>Automated <span>Trading Signals</span></h1>
     <div class="tagline">Scan · Analyze · Trade · Repeat</div>
   </section>
 
-  <section class="section fade-in delay-2">
-    <div class="section-header">
-      <span class="section-title">Performance</span>
-      <span class="live-badge"><span class="pulse-dot"></span>Auto-updated</span>
+  <!-- Toggle -->
+  <div class="toggle-wrapper fade-in delay-2">
+    <div class="toggle-container">
+      <button class="toggle-btn active" data-view="trading" onclick="switchView('trading')">Trading Signals</button>
+      <button class="toggle-btn" data-view="stock" onclick="switchView('stock')">Stock Signals</button>
     </div>
-    <div class="stats-grid loading" id="stats-grid">
-      <div class="stat-card green-accent">
-        <div class="stat-label">Closed Trades</div>
-        <div class="stat-value" id="stat-trades">—</div>
-      </div>
-      <div class="stat-card green-accent">
-        <div class="stat-label">Win Rate</div>
-        <div class="stat-value green" id="stat-winrate">—</div>
-      </div>
-      <div class="stat-card green-accent">
-        <div class="stat-label">Cumulative P&L</div>
-        <div class="stat-value green" id="stat-pnl">—</div>
-      </div>
-      <div class="stat-card green-accent">
-        <div class="stat-label">Avg Return / Trade</div>
-        <div class="stat-value green" id="stat-avg">—</div>
-      </div>
-    </div>
-    <div class="stats-grid loading" id="stats-row-2" style="margin-top:12px;">
-      <div class="stat-card blue-accent">
-        <div class="stat-label">Profit Factor</div>
-        <div class="stat-value blue" id="stat-pf">—</div>
-      </div>
-      <div class="stat-card green-accent">
-        <div class="stat-label">Best Trade</div>
-        <div class="stat-value green" id="stat-best">—</div>
-      </div>
-      <div class="stat-card cyan-accent">
-        <div class="stat-label">Trades This Week</div>
-        <div class="stat-value cyan" id="stat-weekly">—</div>
-      </div>
-      <div class="stat-card red-accent">
-        <div class="stat-label">Max Drawdown</div>
-        <div class="stat-value red" id="stat-dd">—</div>
-      </div>
-    </div>
-    <div class="stats-footer">
-      <span class="updated-text" id="stat-updated">Loading...</span>
-      <span style="display:flex;align-items:center;gap:10px;">
-        <span class="open-positions-badge" id="stat-open">— open</span>
-        <span class="version-tag" id="stat-version">—</span>
-      </span>
-    </div>
-  </section>
+  </div>
 
+  <!-- Dashboards -->
+  <div class="dashboard">
+
+    <!-- ═══ TRADING SIGNALS ═══ -->
+    <div class="dashboard-view active" id="view-trading">
+      <section class="section">
+        <div class="section-header">
+          <span class="section-title">Performance</span>
+          <span class="live-badge"><span class="pulse-dot"></span>Auto-updated</span>
+        </div>
+        <div class="stats-grid loading" id="ts-grid-1">
+          <div class="stat-card green-accent">
+            <div class="stat-label">Closed Trades</div>
+            <div class="stat-value" id="ts-trades">—</div>
+          </div>
+          <div class="stat-card green-accent">
+            <div class="stat-label">Win Rate</div>
+            <div class="stat-value green" id="ts-winrate">—</div>
+          </div>
+          <div class="stat-card green-accent">
+            <div class="stat-label">Cumulative P&L</div>
+            <div class="stat-value green" id="ts-pnl">—</div>
+          </div>
+          <div class="stat-card green-accent">
+            <div class="stat-label">Avg Return / Trade</div>
+            <div class="stat-value green" id="ts-avg">—</div>
+          </div>
+        </div>
+        <div class="stats-grid loading" id="ts-grid-2" style="margin-top:12px;">
+          <div class="stat-card blue-accent">
+            <div class="stat-label">Profit Factor</div>
+            <div class="stat-value blue" id="ts-pf">—</div>
+          </div>
+          <div class="stat-card green-accent">
+            <div class="stat-label">Best Trade</div>
+            <div class="stat-value green" id="ts-best">—</div>
+          </div>
+          <div class="stat-card cyan-accent">
+            <div class="stat-label">Trades This Week</div>
+            <div class="stat-value cyan" id="ts-weekly">—</div>
+          </div>
+          <div class="stat-card red-accent">
+            <div class="stat-label">Max Drawdown</div>
+            <div class="stat-value red" id="ts-dd">—</div>
+          </div>
+        </div>
+        <div class="stats-footer">
+          <span class="updated-text" id="ts-updated">Loading...</span>
+          <span style="display:flex;align-items:center;gap:10px;">
+            <span class="open-positions-badge" id="ts-open">— open</span>
+            <span class="version-tag" id="ts-version">—</span>
+          </span>
+        </div>
+      </section>
+    </div>
+
+    <!-- ═══ STOCK SIGNALS ═══ -->
+    <div class="dashboard-view" id="view-stock">
+      <section class="section">
+        <div class="section-header">
+          <span class="section-title">Scanner Activity</span>
+          <span class="live-badge"><span class="pulse-dot"></span>Auto-updated</span>
+        </div>
+        <div class="stats-grid loading" id="ss-grid-1">
+          <div class="stat-card cyan-accent">
+            <div class="stat-label">Total Signals</div>
+            <div class="stat-value cyan" id="ss-total">—</div>
+          </div>
+          <div class="stat-card green-accent">
+            <div class="stat-label">Strong Buy Signals</div>
+            <div class="stat-value green" id="ss-strongbuy">—</div>
+          </div>
+          <div class="stat-card blue-accent">
+            <div class="stat-label">Signals This Week</div>
+            <div class="stat-value blue" id="ss-weekly">—</div>
+          </div>
+          <div class="stat-card purple-accent">
+            <div class="stat-label">Avg Rating</div>
+            <div class="stat-value purple" id="ss-rating">—</div>
+          </div>
+        </div>
+        <div class="stats-grid loading" id="ss-grid-2" style="margin-top:12px;">
+          <div class="stat-card amber-accent">
+            <div class="stat-label">Top Sector</div>
+            <div class="stat-value amber" id="ss-sector" style="font-size:20px;">—</div>
+          </div>
+          <div class="stat-card green-accent">
+            <div class="stat-label">Top Ticker</div>
+            <div class="stat-value green" id="ss-ticker">—</div>
+          </div>
+          <div class="stat-card cyan-accent">
+            <div class="stat-label">Highest Rated</div>
+            <div class="stat-value cyan" id="ss-highrated">—</div>
+          </div>
+          <div class="stat-card blue-accent">
+            <div class="stat-label">Unique Tickers</div>
+            <div class="stat-value blue" id="ss-unique">—</div>
+          </div>
+        </div>
+        <div class="stats-footer">
+          <span class="updated-text" id="ss-updated">Loading...</span>
+          <span style="display:flex;align-items:center;gap:10px;">
+            <span class="signals-badge" id="ss-breakdown">—</span>
+          </span>
+        </div>
+      </section>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
   <footer class="footer">
     <span class="disclaimer">This is a personal project for educational and research purposes only. Nothing on this page constitutes financial advice. Past performance does not guarantee future results.</span>
     <span class="footer-brand">HoopHedge</span>
@@ -283,49 +430,97 @@
 </div>
 
 <script>
-  const FALLBACK_STATS = {
+  /* ── View Switching ── */
+  function switchView(view) {
+    document.querySelectorAll('.toggle-btn').forEach(btn => btn.classList.remove('active'));
+    document.querySelector(`.toggle-btn[data-view="${view}"]`).classList.add('active');
+
+    document.querySelectorAll('.dashboard-view').forEach(v => v.classList.remove('active'));
+    document.getElementById(`view-${view}`).classList.add('active');
+
+    try { history.replaceState(null, '', view === 'trading' ? '#' : `#${view}`); } catch(e) {}
+  }
+
+  /* ── Handle hash on load ── */
+  if (window.location.hash === '#stock') {
+    switchView('stock');
+  }
+
+  /* ── Trading Signals Data ── */
+  const TS_FALLBACK = {
     closed_trades: 1260, win_rate: 46.0, cumulative_pnl: 279.4,
-    avg_return: 0.22, profit_factor: 1.11,
-    best_trade: 18.7, trades_this_week: 12,
-    max_drawdown: -12.4, open_positions: 47,
-    version: "18.18", last_updated: "Feb 7, 2026 · 4:15 PM"
+    avg_return: 0.22, profit_factor: 1.11, best_trade: 34.4,
+    trades_this_week: 306, max_drawdown: -56.9, open_positions: 65,
+    version: "18.18", last_updated: "Feb 07, 2026 · 07:48 PM"
   };
 
-  async function loadStats() {
+  async function loadTradingSignals() {
     let s;
     try {
       const resp = await fetch('stats.json?' + Date.now());
-      if (!resp.ok) throw new Error('Failed to load');
+      if (!resp.ok) throw new Error('Failed');
       s = await resp.json();
-    } catch (err) {
-      s = FALLBACK_STATS;
-    }
-    try {
-      document.getElementById('stat-trades').textContent = s.closed_trades.toLocaleString();
-      document.getElementById('stat-winrate').textContent = s.win_rate.toFixed(1) + '%';
+    } catch { s = TS_FALLBACK; }
 
-      const pnlEl = document.getElementById('stat-pnl');
-      pnlEl.textContent = (s.cumulative_pnl >= 0 ? '+' : '') + s.cumulative_pnl.toFixed(1) + '%';
-      pnlEl.className = 'stat-value ' + (s.cumulative_pnl >= 0 ? 'green' : 'red');
+    document.getElementById('ts-trades').textContent = s.closed_trades.toLocaleString();
+    document.getElementById('ts-winrate').textContent = s.win_rate.toFixed(1) + '%';
 
-      const avgEl = document.getElementById('stat-avg');
-      avgEl.textContent = (s.avg_return >= 0 ? '+' : '') + s.avg_return.toFixed(2) + '%';
-      avgEl.className = 'stat-value ' + (s.avg_return >= 0 ? 'green' : 'red');
+    const pnlEl = document.getElementById('ts-pnl');
+    pnlEl.textContent = (s.cumulative_pnl >= 0 ? '+' : '') + s.cumulative_pnl.toFixed(1) + '%';
+    pnlEl.className = 'stat-value ' + (s.cumulative_pnl >= 0 ? 'green' : 'red');
 
-      document.getElementById('stat-pf').textContent = s.profit_factor.toFixed(2);
-      document.getElementById('stat-best').textContent = '+' + s.best_trade.toFixed(1) + '%';
-      document.getElementById('stat-weekly').textContent = s.trades_this_week;
-      document.getElementById('stat-dd').textContent = s.max_drawdown.toFixed(1) + '%';
-      document.getElementById('stat-open').textContent = s.open_positions + ' open';
-      document.getElementById('stat-version').textContent = 'v' + s.version;
-      document.getElementById('stat-updated').textContent = 'Last updated: ' + s.last_updated;
+    const avgEl = document.getElementById('ts-avg');
+    avgEl.textContent = (s.avg_return >= 0 ? '+' : '') + s.avg_return.toFixed(2) + '%';
+    avgEl.className = 'stat-value ' + (s.avg_return >= 0 ? 'green' : 'red');
 
-      document.getElementById('stats-grid').classList.remove('loading');
-      document.getElementById('stats-row-2').classList.remove('loading');
-    } catch (e) {}
+    document.getElementById('ts-pf').textContent = s.profit_factor.toFixed(2);
+    document.getElementById('ts-best').textContent = '+' + s.best_trade.toFixed(1) + '%';
+    document.getElementById('ts-weekly').textContent = s.trades_this_week;
+    document.getElementById('ts-dd').textContent = s.max_drawdown.toFixed(1) + '%';
+    document.getElementById('ts-open').textContent = s.open_positions + ' open';
+    document.getElementById('ts-version').textContent = 'v' + s.version;
+    document.getElementById('ts-updated').textContent = 'Last updated: ' + s.last_updated;
+
+    document.getElementById('ts-grid-1').classList.remove('loading');
+    document.getElementById('ts-grid-2').classList.remove('loading');
   }
 
-  loadStats();
+  /* ── Stock Signals Data ── */
+  const SS_FALLBACK = {
+    total_signals: 932, strong_buy: 163, signals_this_week: 0,
+    avg_rating: 5.8, top_sector: "Technology", top_ticker: "TSLA",
+    highest_rated: "PARR", highest_rated_score: 7, unique_tickers: 150,
+    buy_count: 662, watch_count: 107,
+    last_updated: "Feb 08, 2026 · 10:00 PM"
+  };
+
+  async function loadStockSignals() {
+    let s;
+    try {
+      const resp = await fetch('stats_sa.json?' + Date.now());
+      if (!resp.ok) throw new Error('Failed');
+      s = await resp.json();
+    } catch { s = SS_FALLBACK; }
+
+    document.getElementById('ss-total').textContent = s.total_signals.toLocaleString();
+    document.getElementById('ss-strongbuy').textContent = s.strong_buy.toLocaleString();
+    document.getElementById('ss-weekly').textContent = s.signals_this_week;
+    document.getElementById('ss-rating').textContent = s.avg_rating.toFixed(1) + ' / 10';
+    document.getElementById('ss-sector').textContent = s.top_sector;
+    document.getElementById('ss-ticker').textContent = s.top_ticker;
+    document.getElementById('ss-highrated').textContent = s.highest_rated;
+    document.getElementById('ss-unique').textContent = s.unique_tickers.toLocaleString();
+    document.getElementById('ss-breakdown').textContent =
+      s.strong_buy + ' strong · ' + s.buy_count + ' buy · ' + s.watch_count + ' watch';
+    document.getElementById('ss-updated').textContent = 'Last updated: ' + s.last_updated;
+
+    document.getElementById('ss-grid-1').classList.remove('loading');
+    document.getElementById('ss-grid-2').classList.remove('loading');
+  }
+
+  /* ── Init ── */
+  loadTradingSignals();
+  loadStockSignals();
 </script>
 
 </body>
