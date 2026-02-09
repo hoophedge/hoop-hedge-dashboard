@@ -1,14 +1,14 @@
 {
-  "total_signals": 82156,
-  "strong_buy": 11957,
-  "buy_count": 60678,
-  "watch_count": 9521,
-  "signals_this_week": 16493,
+  "total_signals": 83090,
+  "strong_buy": 12120,
+  "buy_count": 61341,
+  "watch_count": 9629,
+  "signals_this_week": 934,
   "avg_rating": 4.6,
   "top_sector": "Healthcare",
   "top_ticker": "CRM",
   "highest_rated": "MSFT",
   "highest_rated_score": 9.0,
   "unique_tickers": 1561,
-  "last_updated": "Feb 08, 2026 \u00b7 05:44 PM"
+  "last_updated": "Feb 09, 2026 \u00b7 09:21 AM"
 }
