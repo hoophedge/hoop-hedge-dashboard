@@ -1,14 +1,91 @@
 {
-  "total_signals": 83090,
-  "strong_buy": 12120,
-  "buy_count": 61341,
-  "watch_count": 9629,
-  "signals_this_week": 934,
-  "avg_rating": 4.6,
-  "top_sector": "Healthcare",
-  "top_ticker": "CRM",
-  "highest_rated": "MSFT",
-  "highest_rated_score": 9.0,
-  "unique_tickers": 1561,
-  "last_updated": "Feb 09, 2026 \u00b7 09:21 AM"
+  "stocks_scanned": 4905,
+  "strong_buy_count": 167,
+  "buy_count": 667,
+  "watch_count": 112,
+  "top_strong_buy": [
+    {
+      "ticker": "MU",
+      "price": 387.11,
+      "rating": 7,
+      "momentum_6m": 232.32,
+      "catalyst": "Breakout: +65.7% in 3M, +20.7% in 1M",
+      "warning": null
+    },
+    {
+      "ticker": "IAG",
+      "price": 21.28,
+      "rating": 5,
+      "momentum_6m": 181.99,
+      "catalyst": "Breakout: +67.9% in 3M, +23.7% in 1M",
+      "warning": "Low AI rating"
+    },
+    {
+      "ticker": "NGD",
+      "price": 11.36,
+      "rating": 7,
+      "momentum_6m": 132.89,
+      "catalyst": "Breakout: +61.7% in 3M, +13.6% in 1M",
+      "warning": null
+    },
+    {
+      "ticker": "CENX",
+      "price": 54.43,
+      "rating": 5,
+      "momentum_6m": 127.73,
+      "catalyst": "Breakout: +80.8% in 3M, +21.2% in 1M",
+      "warning": "Low AI rating"
+    },
+    {
+      "ticker": "ARRY",
+      "price": 12.04,
+      "rating": 5,
+      "momentum_6m": 115.64,
+      "catalyst": "Breakout: +41.7% in 3M, +34.0% in 1M",
+      "warning": "Low AI rating"
+    }
+  ],
+  "top_buy": [
+    {
+      "ticker": "AXTI",
+      "price": 27.51,
+      "rating": 3,
+      "momentum_6m": 1169.04,
+      "catalyst": "Breakout: +192.4% in 3M, +20.3% in 1M",
+      "warning": "Downgraded (rating 3.0 < 5.0)"
+    },
+    {
+      "ticker": "HYMC",
+      "price": 38.76,
+      "rating": 2,
+      "momentum_6m": 990.96,
+      "catalyst": "Breakout: +404.8% in 3M, +42.4% in 1M",
+      "warning": "Downgraded (rating 2.0 < 5.0)"
+    },
+    {
+      "ticker": "BE",
+      "price": 153.8,
+      "rating": 5,
+      "momentum_6m": 308.92,
+      "catalyst": "Strong momentum: +308.9% in 6M",
+      "warning": "Low AI rating"
+    },
+    {
+      "ticker": "CIFR",
+      "price": 16.87,
+      "rating": 3,
+      "momentum_6m": 251.89,
+      "catalyst": "Strong momentum: +251.9% in 6M",
+      "warning": "Low AI rating"
+    },
+    {
+      "ticker": "ALM",
+      "price": 14.78,
+      "rating": 1,
+      "momentum_6m": 242.23,
+      "catalyst": "Breakout: +120.0% in 3M, +51.5% in 1M",
+      "warning": "Downgraded (rating 1.0 < 5.0)"
+    }
+  ],
+  "last_updated": "Feb 09, 2026 \u00b7 03:54 PM"
 }
