@@ -33,7 +33,6 @@
     --amber-dim: rgba(245,158,11,0.10);
     --purple: #a78bfa;
     --purple-dim: rgba(167,139,250,0.10);
-    --glow-green: 0 0 20px rgba(34,197,94,0.15);
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -83,10 +82,6 @@
     background: linear-gradient(135deg, var(--green), var(--cyan));
     -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
   }
-  .hero p {
-    font-size: 17px; color: var(--text-dim);
-    max-width: 540px; margin: 0 auto; font-weight: 300; line-height: 1.7;
-  }
   .tagline {
     font-family: 'JetBrains Mono', monospace;
     font-size: 13px; font-weight: 500;
@@ -134,14 +129,13 @@
     content: '';
     position: absolute;
     bottom: -1px;
-    left: 20%;
-    right: 20%;
+    left: 20%; right: 20%;
     height: 2px;
     background: linear-gradient(90deg, var(--green), var(--cyan));
     border-radius: 2px;
   }
 
-  /* ── Dashboard Sections ── */
+  /* ── Dashboard ── */
   .dashboard { position: relative; }
   .dashboard-view {
     opacity: 0;
@@ -168,9 +162,8 @@
     font-size: 13px; font-weight: 600; text-transform: uppercase;
     letter-spacing: 1.2px; color: var(--text-dim);
   }
-  .section-meta { font-size: 12px; color: var(--text-faint); }
 
-  /* ── Stat Cards ── */
+  /* ── Stat Cards (Trading Signals) ── */
   .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
   .stat-card {
     background: var(--surface); border: 1px solid var(--border);
@@ -208,12 +201,7 @@
   .stat-value.amber { color: var(--amber); }
   .stat-value.purple { color: var(--purple); }
 
-  .stat-sub {
-    font-size: 11px; color: var(--text-faint);
-    margin-top: 6px; font-weight: 400;
-  }
-
-  /* ── Footer elements ── */
+  /* ── Shared Footer ── */
   .stats-footer {
     display: flex; justify-content: space-between; align-items: center; margin-top: 16px;
   }
@@ -238,11 +226,242 @@
     font-size: 11px; font-weight: 600; color: var(--amber);
     background: var(--amber-dim); padding: 4px 10px; border-radius: 6px;
   }
-  .signals-badge {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 11px; font-weight: 600; color: var(--cyan);
-    background: var(--cyan-dim); padding: 4px 10px; border-radius: 6px;
+
+  /* ═══════════════════════════════════════════════════════════
+     STOCK SIGNALS
+     ═══════════════════════════════════════════════════════════ */
+
+  /* ── Credibility Strip ── */
+  .stat-strip {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 14px 28px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
   }
+  .stat-strip-item {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-dim);
+    white-space: nowrap;
+  }
+  .stat-strip-item .strip-value {
+    font-weight: 700;
+    color: var(--white);
+  }
+  .stat-strip-item .strip-value.green { color: var(--green); }
+  .stat-strip-item .strip-value.blue { color: var(--blue); }
+  .stat-strip-divider {
+    width: 1px;
+    height: 16px;
+    background: var(--border-bright);
+    margin: 0 8px;
+  }
+
+  /* ── Signal Sections ── */
+  .signal-section { margin-bottom: 40px; }
+  .signal-section-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+  .signal-section-title {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--white);
+  }
+  .signal-section-title .icon { margin-right: 4px; }
+  .signal-count-badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 6px;
+  }
+  .signal-count-badge.green {
+    color: var(--green);
+    background: var(--green-dim);
+  }
+  .signal-count-badge.blue {
+    color: var(--blue);
+    background: var(--blue-dim);
+  }
+
+  /* ── Signal Tables ── */
+  .signal-table-wrap {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+  }
+  .signal-table-wrap.tier-strong {
+    border-left: 2px solid var(--green);
+  }
+  .signal-table-wrap.tier-buy {
+    border-left: 2px solid var(--blue);
+  }
+
+  .signal-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--surface);
+  }
+  .signal-table thead th {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--text-dim);
+    padding: 12px 14px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+    background: var(--surface2);
+  }
+  .signal-table thead th.right { text-align: right; }
+  .signal-table thead th.center { text-align: center; }
+  .signal-table thead th.col-rank { width: 42px; text-align: center; }
+  .signal-table thead th.col-ticker { width: 80px; }
+  .signal-table thead th.col-price { width: 100px; }
+  .signal-table thead th.col-score { width: 105px; }
+  .signal-table thead th.col-momentum { width: 100px; }
+
+  .signal-table tbody tr {
+    transition: background 0.15s;
+  }
+  .signal-table tbody tr:hover {
+    background: var(--surface2);
+  }
+  .signal-table tbody tr:not(:last-child) td {
+    border-bottom: 1px solid var(--border);
+  }
+
+  .signal-table td {
+    padding: 13px 14px;
+    font-size: 14px;
+    vertical-align: middle;
+  }
+  .signal-table td.right { text-align: right; }
+  .signal-table td.center { text-align: center; }
+
+  /* Rank */
+  .rank-cell {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-faint);
+    text-align: center;
+  }
+
+  /* Ticker */
+  .ticker-cell {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--white);
+    letter-spacing: 0.5px;
+  }
+
+  /* Price */
+  .price-cell {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 500;
+    color: var(--text);
+  }
+
+  /* HoopScore pill */
+  .score-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    font-weight: 700;
+    min-width: 32px;
+    padding: 3px 8px;
+    border-radius: 6px;
+    letter-spacing: 0;
+  }
+  .score-pill.high {
+    color: var(--green);
+    background: var(--green-dim);
+  }
+  .score-pill.mid {
+    color: var(--amber);
+    background: var(--amber-dim);
+  }
+  .score-pill.low {
+    color: var(--text-dim);
+    background: rgba(255,255,255,0.04);
+  }
+
+  /* Momentum */
+  .momentum-cell {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 600;
+    color: var(--green);
+  }
+
+  /* Catalyst */
+  .catalyst-cell {
+    font-size: 13px;
+    color: var(--text-dim);
+    line-height: 1.4;
+  }
+  .catalyst-cell .catalyst-tag {
+    color: var(--cyan);
+    font-weight: 500;
+  }
+
+  /* Warning pill */
+  .warning-pill {
+    display: inline-block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--amber);
+    background: var(--amber-dim);
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-left: 6px;
+    white-space: nowrap;
+    vertical-align: middle;
+  }
+
+  /* System badge in footer */
+  .system-badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--cyan);
+    background: var(--cyan-dim);
+    padding: 4px 10px;
+    border-radius: 6px;
+  }
+
+  /* ── Loading shimmer ── */
+  .loading .stat-value {
+    background: var(--surface2); color: transparent;
+    border-radius: 6px; animation: shimmer 1.8s ease-in-out infinite;
+  }
+  @keyframes shimmer { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+
+  /* ── Animations ── */
+  .fade-in {
+    opacity: 0; transform: translateY(16px);
+    animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+  @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+  .delay-1 { animation-delay: 0.08s; }
+  .delay-2 { animation-delay: 0.16s; }
 
   /* ── Footer ── */
   .footer {
@@ -262,34 +481,28 @@
     text-transform: uppercase; color: var(--text-dim);
   }
 
-  /* ── Loading shimmer ── */
-  .loading .stat-value {
-    background: var(--surface2); color: transparent;
-    border-radius: 6px; animation: shimmer 1.8s ease-in-out infinite;
-  }
-  @keyframes shimmer { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
-
-  /* ── Animations ── */
-  .fade-in {
-    opacity: 0; transform: translateY(16px);
-    animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  }
-  @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
-  .delay-1 { animation-delay: 0.08s; }
-  .delay-2 { animation-delay: 0.16s; }
-  .delay-3 { animation-delay: 0.24s; }
-  .delay-4 { animation-delay: 0.32s; }
-  .delay-5 { animation-delay: 0.40s; }
-
   /* ── Responsive ── */
   @media (max-width: 700px) {
     .container { padding: 0 16px; }
     .hero h1 { font-size: 32px; }
-    .hero p { font-size: 15px; }
     .stats-grid { grid-template-columns: 1fr 1fr; }
     .section { margin-bottom: 40px; }
     .stat-value { font-size: 22px; }
     .toggle-btn { padding: 8px 16px; font-size: 12px; }
+
+    .stat-strip {
+      flex-direction: column;
+      gap: 4px;
+      padding: 12px 16px;
+    }
+    .stat-strip-divider { display: none; }
+
+    .signal-table td { padding: 10px 10px; }
+    .signal-table thead th { padding: 10px 10px; font-size: 10px; }
+    .catalyst-cell { display: none; }
+    .col-catalyst-head { display: none; }
+    .ticker-cell { font-size: 13px; }
+    .rank-cell { font-size: 11px; }
   }
 </style>
 </head>
@@ -370,52 +583,86 @@
     <!-- ═══ STOCK SIGNALS ═══ -->
     <div class="dashboard-view" id="view-stock">
       <section class="section">
+
         <div class="section-header">
-          <span class="section-title">Scanner Activity</span>
+          <span class="section-title">Latest Scan Results</span>
           <span class="live-badge"><span class="pulse-dot"></span>Auto-updated</span>
         </div>
-        <div class="stats-grid loading" id="ss-grid-1">
-          <div class="stat-card cyan-accent">
-            <div class="stat-label">Total Signals</div>
-            <div class="stat-value cyan" id="ss-total">—</div>
+
+        <!-- Credibility Strip -->
+        <div class="stat-strip" id="ss-strip">
+          <div class="stat-strip-item">
+            <span class="strip-value" id="ss-scanned">—</span> Scanned
           </div>
-          <div class="stat-card green-accent">
-            <div class="stat-label">Strong Buy Signals</div>
-            <div class="stat-value green" id="ss-strongbuy">—</div>
+          <div class="stat-strip-divider"></div>
+          <div class="stat-strip-item">
+            <span class="strip-value green" id="ss-strongbuy">—</span> Strong Buy
           </div>
-          <div class="stat-card blue-accent">
-            <div class="stat-label">Signals This Week</div>
-            <div class="stat-value blue" id="ss-weekly">—</div>
+          <div class="stat-strip-divider"></div>
+          <div class="stat-strip-item">
+            <span class="strip-value blue" id="ss-buy">—</span> Buy
           </div>
-          <div class="stat-card purple-accent">
-            <div class="stat-label">Avg Rating</div>
-            <div class="stat-value purple" id="ss-rating">—</div>
-          </div>
-        </div>
-        <div class="stats-grid loading" id="ss-grid-2" style="margin-top:12px;">
-          <div class="stat-card amber-accent">
-            <div class="stat-label">Top Sector</div>
-            <div class="stat-value amber" id="ss-sector" style="font-size:20px;">—</div>
-          </div>
-          <div class="stat-card green-accent">
-            <div class="stat-label">Top Ticker</div>
-            <div class="stat-value green" id="ss-ticker">—</div>
-          </div>
-          <div class="stat-card cyan-accent">
-            <div class="stat-label">Highest Rated</div>
-            <div class="stat-value cyan" id="ss-highrated">—</div>
-          </div>
-          <div class="stat-card blue-accent">
-            <div class="stat-label">Unique Tickers</div>
-            <div class="stat-value blue" id="ss-unique">—</div>
+          <div class="stat-strip-divider"></div>
+          <div class="stat-strip-item">
+            <span class="strip-value" id="ss-watch">—</span> Watch
           </div>
         </div>
+
+        <!-- Top Strong Buy Signals -->
+        <div class="signal-section">
+          <div class="signal-section-header">
+            <span class="signal-section-title"><span class="icon">⭐</span> Top Strong Buy Signals</span>
+            <span class="signal-count-badge green" id="ss-sb-count">—</span>
+          </div>
+          <div class="signal-table-wrap tier-strong">
+            <table class="signal-table">
+              <thead>
+                <tr>
+                  <th class="col-rank">#</th>
+                  <th class="col-ticker">Ticker</th>
+                  <th class="col-price right">Price</th>
+                  <th class="col-score right">HoopScore</th>
+                  <th class="col-momentum right">Momentum</th>
+                  <th class="col-catalyst-head">Catalyst</th>
+                </tr>
+              </thead>
+              <tbody id="ss-tbody-strongbuy">
+                <tr><td colspan="6" style="text-align:center;color:var(--text-faint);padding:24px;">Loading signals...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Top Buy Signals -->
+        <div class="signal-section">
+          <div class="signal-section-header">
+            <span class="signal-section-title"><span class="icon">📈</span> Top Buy Signals</span>
+            <span class="signal-count-badge blue" id="ss-buy-count">—</span>
+          </div>
+          <div class="signal-table-wrap tier-buy">
+            <table class="signal-table">
+              <thead>
+                <tr>
+                  <th class="col-rank">#</th>
+                  <th class="col-ticker">Ticker</th>
+                  <th class="col-price right">Price</th>
+                  <th class="col-score right">HoopScore</th>
+                  <th class="col-momentum right">Momentum</th>
+                  <th class="col-catalyst-head">Catalyst</th>
+                </tr>
+              </thead>
+              <tbody id="ss-tbody-buy">
+                <tr><td colspan="6" style="text-align:center;color:var(--text-faint);padding:24px;">Loading signals...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
         <div class="stats-footer">
           <span class="updated-text" id="ss-updated">Loading...</span>
-          <span style="display:flex;align-items:center;gap:10px;">
-            <span class="signals-badge" id="ss-breakdown">—</span>
-          </span>
+          <span class="system-badge">Stock Analyzer</span>
         </div>
+
       </section>
     </div>
 
@@ -433,20 +680,15 @@
   /* ── View Switching ── */
   function switchView(view) {
     document.querySelectorAll('.toggle-btn').forEach(btn => btn.classList.remove('active'));
-    document.querySelector(`.toggle-btn[data-view="${view}"]`).classList.add('active');
-
+    document.querySelector('.toggle-btn[data-view="' + view + '"]').classList.add('active');
     document.querySelectorAll('.dashboard-view').forEach(v => v.classList.remove('active'));
-    document.getElementById(`view-${view}`).classList.add('active');
-
-    try { history.replaceState(null, '', view === 'trading' ? '#' : `#${view}`); } catch(e) {}
+    document.getElementById('view-' + view).classList.add('active');
+    try { history.replaceState(null, '', view === 'trading' ? '#' : '#' + view); } catch(e) {}
   }
 
-  /* ── Handle hash on load ── */
-  if (window.location.hash === '#stock') {
-    switchView('stock');
-  }
+  if (window.location.hash === '#stock') switchView('stock');
 
-  /* ── Trading Signals Data ── */
+  /* ── Trading Signals ── */
   const TS_FALLBACK = {
     closed_trades: 1260, win_rate: 46.0, cumulative_pnl: 279.4,
     avg_return: 0.22, profit_factor: 1.11, best_trade: 34.4,
@@ -455,21 +697,21 @@
   };
 
   async function loadTradingSignals() {
-    let s;
+    var s;
     try {
-      const resp = await fetch('stats.json?' + Date.now());
-      if (!resp.ok) throw new Error('Failed');
+      var resp = await fetch('stats.json?' + Date.now());
+      if (!resp.ok) throw new Error();
       s = await resp.json();
-    } catch { s = TS_FALLBACK; }
+    } catch(e) { s = TS_FALLBACK; }
 
     document.getElementById('ts-trades').textContent = s.closed_trades.toLocaleString();
     document.getElementById('ts-winrate').textContent = s.win_rate.toFixed(1) + '%';
 
-    const pnlEl = document.getElementById('ts-pnl');
+    var pnlEl = document.getElementById('ts-pnl');
     pnlEl.textContent = (s.cumulative_pnl >= 0 ? '+' : '') + s.cumulative_pnl.toFixed(1) + '%';
     pnlEl.className = 'stat-value ' + (s.cumulative_pnl >= 0 ? 'green' : 'red');
 
-    const avgEl = document.getElementById('ts-avg');
+    var avgEl = document.getElementById('ts-avg');
     avgEl.textContent = (s.avg_return >= 0 ? '+' : '') + s.avg_return.toFixed(2) + '%';
     avgEl.className = 'stat-value ' + (s.avg_return >= 0 ? 'green' : 'red');
 
@@ -485,37 +727,95 @@
     document.getElementById('ts-grid-2').classList.remove('loading');
   }
 
-  /* ── Stock Signals Data ── */
-  const SS_FALLBACK = {
-    total_signals: 932, strong_buy: 163, signals_this_week: 0,
-    avg_rating: 5.8, top_sector: "Technology", top_ticker: "TSLA",
-    highest_rated: "PARR", highest_rated_score: 7, unique_tickers: 150,
-    buy_count: 662, watch_count: 107,
-    last_updated: "Feb 08, 2026 · 10:00 PM"
+  /* ── Stock Signals ── */
+  var SS_FALLBACK = {
+    stocks_scanned: 2615,
+    strong_buy_count: 163,
+    buy_count: 662,
+    watch_count: 107,
+    top_strong_buy: [
+      { ticker: "WDC",  price: 282.64, rating: 5, momentum_6m: 277.67, catalyst: "Breakout: +72.9% in 3M, +50.6% in 1M", warning: "Low AI rating" },
+      { ticker: "MU",   price: 394.73, rating: 7, momentum_6m: 232.33, catalyst: "Breakout: +65.7% in 3M, +20.7% in 1M", warning: null },
+      { ticker: "ACMR", price: 62.45,  rating: 7, momentum_6m: 160.99, catalyst: "Breakout: +102.1% in 3M, +27.0% in 1M", warning: null },
+      { ticker: "CENX", price: 52.36,  rating: 5, momentum_6m: 127.73, catalyst: "Breakout: +80.8% in 3M, +21.2% in 1M", warning: "Low AI rating" },
+      { ticker: "AMAT", price: 322.51, rating: 7, momentum_6m: 75.30,  catalyst: "Breakout: +38.4% in 3M, +14.5% in 1M", warning: null }
+    ],
+    top_buy: [
+      { ticker: "LITE", price: 552.00, rating: 4, momentum_6m: 374.75, catalyst: "Breakout: +130.3% in 3M, +58.5% in 1M", warning: "Downgrade" },
+      { ticker: "ARWR", price: 64.48,  rating: 2, momentum_6m: 292.94, catalyst: "Strong momentum: +292.9% in 6M", warning: "Low AI rating" },
+      { ticker: "ALM",  price: 14.11,  rating: 1, momentum_6m: 242.23, catalyst: "Breakout: +120.0% in 3M, +51.5% in 1M", warning: "Downgrade" },
+      { ticker: "CIFR", price: 14.71,  rating: 3, momentum_6m: 210.11, catalyst: "Strong momentum: +210.1% in 6M", warning: "Low AI rating" },
+      { ticker: "HL",   price: 22.78,  rating: 4, momentum_6m: 199.85, catalyst: "Breakout: +199.9% in 6M", warning: "Low AI rating" }
+    ],
+    last_updated: "Feb 08, 2026 · 12:35 PM"
   };
 
+  /* HoopScore color-coded pill */
+  function scorePill(rating) {
+    var tier = rating >= 7 ? 'high' : (rating >= 4 ? 'mid' : 'low');
+    return '<span class="score-pill ' + tier + '">' + rating + '/10</span>';
+  }
+
+  /* Catalyst formatting */
+  function formatCatalyst(catalyst, warning) {
+    var html = '';
+    var idx = catalyst.indexOf(':');
+    if (idx > 0 && idx < 25) {
+      html = '<span class="catalyst-tag">' + catalyst.slice(0, idx) + '</span>' + catalyst.slice(idx);
+    } else {
+      html = catalyst;
+    }
+    if (warning) {
+      html += '<span class="warning-pill">' + warning + '</span>';
+    }
+    return html;
+  }
+
+  /* Render signal rows */
+  function renderSignalRows(signals, tbodyId, totalCount) {
+    var tbody = document.getElementById(tbodyId);
+    if (!signals || signals.length === 0) {
+      tbody.innerHTML = '<tr><td colspan="6" style="text-align:center;color:var(--text-faint);padding:24px;">No signals available</td></tr>';
+      return;
+    }
+    tbody.innerHTML = signals.map(function(s, i) {
+      return '<tr>' +
+        '<td class="rank-cell">' + (i + 1) + '</td>' +
+        '<td class="ticker-cell">' + s.ticker + '</td>' +
+        '<td class="price-cell right">$' + s.price.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2}) + '</td>' +
+        '<td class="right">' + scorePill(s.rating) + '</td>' +
+        '<td class="momentum-cell right">+' + s.momentum_6m.toFixed(1) + '%</td>' +
+        '<td class="catalyst-cell">' + formatCatalyst(s.catalyst, s.warning) + '</td>' +
+      '</tr>';
+    }).join('');
+  }
+
   async function loadStockSignals() {
-    let s;
+    var s;
     try {
-      const resp = await fetch('stats_sa.json?' + Date.now());
-      if (!resp.ok) throw new Error('Failed');
+      var resp = await fetch('stats_sa.json?' + Date.now());
+      if (!resp.ok) throw new Error();
       s = await resp.json();
-    } catch { s = SS_FALLBACK; }
+    } catch(e) { s = SS_FALLBACK; }
 
-    document.getElementById('ss-total').textContent = s.total_signals.toLocaleString();
-    document.getElementById('ss-strongbuy').textContent = s.strong_buy.toLocaleString();
-    document.getElementById('ss-weekly').textContent = s.signals_this_week;
-    document.getElementById('ss-rating').textContent = s.avg_rating.toFixed(1) + ' / 10';
-    document.getElementById('ss-sector').textContent = s.top_sector;
-    document.getElementById('ss-ticker').textContent = s.top_ticker;
-    document.getElementById('ss-highrated').textContent = s.highest_rated;
-    document.getElementById('ss-unique').textContent = s.unique_tickers.toLocaleString();
-    document.getElementById('ss-breakdown').textContent =
-      s.strong_buy + ' strong · ' + s.buy_count + ' buy · ' + s.watch_count + ' watch';
+    /* Strip */
+    document.getElementById('ss-scanned').textContent = s.stocks_scanned.toLocaleString();
+    document.getElementById('ss-strongbuy').textContent = s.strong_buy_count.toLocaleString();
+    document.getElementById('ss-buy').textContent = s.buy_count.toLocaleString();
+    document.getElementById('ss-watch').textContent = s.watch_count.toLocaleString();
+
+    /* Badges: "Top 5 of 163" */
+    document.getElementById('ss-sb-count').textContent =
+      'Top ' + s.top_strong_buy.length + ' of ' + s.strong_buy_count;
+    document.getElementById('ss-buy-count').textContent =
+      'Top ' + s.top_buy.length + ' of ' + s.buy_count;
+
+    /* Tables */
+    renderSignalRows(s.top_strong_buy, 'ss-tbody-strongbuy');
+    renderSignalRows(s.top_buy, 'ss-tbody-buy');
+
+    /* Footer */
     document.getElementById('ss-updated').textContent = 'Last updated: ' + s.last_updated;
-
-    document.getElementById('ss-grid-1').classList.remove('loading');
-    document.getElementById('ss-grid-2').classList.remove('loading');
   }
 
   /* ── Init ── */
