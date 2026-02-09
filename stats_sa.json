@@ -1,54 +1,54 @@
 {
   "stocks_scanned": 4905,
-  "strong_buy_count": 167,
-  "buy_count": 667,
-  "watch_count": 112,
+  "strong_buy_count": 161,
+  "buy_count": 675,
+  "watch_count": 93,
   "top_strong_buy": [
     {
       "ticker": "MU",
-      "price": 387.11,
+      "price": 383.5,
       "rating": 7,
-      "momentum_6m": 232.32,
-      "catalyst": "Breakout: +65.7% in 3M, +20.7% in 1M",
+      "momentum_6m": 210.29,
+      "catalyst": "Breakout: +61.3% in 3M, +11.1% in 1M",
       "warning": null
     },
     {
       "ticker": "IAG",
-      "price": 21.28,
+      "price": 21.27,
       "rating": 5,
       "momentum_6m": 181.99,
       "catalyst": "Breakout: +67.9% in 3M, +23.7% in 1M",
       "warning": "Low AI rating"
     },
     {
-      "ticker": "NGD",
-      "price": 11.36,
-      "rating": 7,
-      "momentum_6m": 132.89,
-      "catalyst": "Breakout: +61.7% in 3M, +13.6% in 1M",
-      "warning": null
-    },
-    {
       "ticker": "CENX",
-      "price": 54.43,
+      "price": 54.36,
       "rating": 5,
-      "momentum_6m": 127.73,
-      "catalyst": "Breakout: +80.8% in 3M, +21.2% in 1M",
+      "momentum_6m": 141.71,
+      "catalyst": "Breakout: +64.5% in 3M, +19.0% in 1M",
       "warning": "Low AI rating"
     },
     {
       "ticker": "ARRY",
-      "price": 12.04,
+      "price": 11.92,
       "rating": 5,
-      "momentum_6m": 115.64,
-      "catalyst": "Breakout: +41.7% in 3M, +34.0% in 1M",
+      "momentum_6m": 117.52,
+      "catalyst": "Breakout: +39.6% in 3M, +32.4% in 1M",
+      "warning": "Low AI rating"
+    },
+    {
+      "ticker": "VSAT",
+      "price": 46.77,
+      "rating": 5,
+      "momentum_6m": 83.56,
+      "catalyst": "Breakout: +31.0% in 3M, +14.9% in 1M",
       "warning": "Low AI rating"
     }
   ],
   "top_buy": [
     {
       "ticker": "AXTI",
-      "price": 27.51,
+      "price": 27.63,
       "rating": 3,
       "momentum_6m": 1169.04,
       "catalyst": "Breakout: +192.4% in 3M, +20.3% in 1M",
@@ -56,7 +56,7 @@
     },
     {
       "ticker": "HYMC",
-      "price": 38.76,
+      "price": 38.64,
       "rating": 2,
       "momentum_6m": 990.96,
       "catalyst": "Breakout: +404.8% in 3M, +42.4% in 1M",
@@ -64,28 +64,28 @@
     },
     {
       "ticker": "BE",
-      "price": 153.8,
+      "price": 154.69,
       "rating": 5,
       "momentum_6m": 308.92,
       "catalyst": "Strong momentum: +308.9% in 6M",
       "warning": "Low AI rating"
     },
     {
+      "ticker": "PL",
+      "price": 23.97,
+      "rating": 4,
+      "momentum_6m": 273.91,
+      "catalyst": "Strong momentum: +273.9% in 6M",
+      "warning": "Low AI rating"
+    },
+    {
       "ticker": "CIFR",
-      "price": 16.87,
+      "price": 16.76,
       "rating": 3,
       "momentum_6m": 251.89,
       "catalyst": "Strong momentum: +251.9% in 6M",
       "warning": "Low AI rating"
-    },
-    {
-      "ticker": "ALM",
-      "price": 14.78,
-      "rating": 1,
-      "momentum_6m": 242.23,
-      "catalyst": "Breakout: +120.0% in 3M, +51.5% in 1M",
-      "warning": "Downgraded (rating 1.0 < 5.0)"
     }
   ],
-  "last_updated": "Feb 09, 2026 \u00b7 03:54 PM"
+  "last_updated": "Feb 09, 2026 \u00b7 04:54 PM"
 }
