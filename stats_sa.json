@@ -1,91 +1,91 @@
 {
   "stocks_scanned": 4905,
-  "strong_buy_count": 160,
-  "buy_count": 674,
-  "watch_count": 93,
+  "strong_buy_count": 145,
+  "buy_count": 623,
+  "watch_count": 114,
   "top_strong_buy": [
     {
-      "ticker": "IAG",
-      "price": 21.28,
+      "ticker": "WDC",
+      "price": 262.56,
       "rating": 5,
-      "momentum_6m": 181.85,
-      "catalyst": "Breakout: +67.8% in 3M, +23.6% in 1M",
+      "momentum_6m": 246.56,
+      "catalyst": "Breakout: +50.8% in 3M, +23.8% in 1M",
       "warning": "Low AI rating"
     },
     {
-      "ticker": "CENX",
-      "price": 54.36,
-      "rating": 5,
-      "momentum_6m": 141.71,
-      "catalyst": "Breakout: +64.5% in 3M, +19.0% in 1M",
-      "warning": "Low AI rating"
-    },
-    {
-      "ticker": "NGD",
-      "price": 11.37,
+      "ticker": "MU",
+      "price": 373.25,
       "rating": 7,
-      "momentum_6m": 132.99,
-      "catalyst": "Breakout: +61.7% in 3M, +13.7% in 1M",
+      "momentum_6m": 192.47,
+      "catalyst": "Quality+Momentum: 7.0 rating, +192.5% in 6M",
       "warning": null
     },
     {
-      "ticker": "ARRY",
-      "price": 11.92,
+      "ticker": "COHR",
+      "price": 228.37,
       "rating": 5,
-      "momentum_6m": 117.52,
-      "catalyst": "Breakout: +39.6% in 3M, +32.4% in 1M",
+      "momentum_6m": 95.92,
+      "catalyst": "Breakout: +37.0% in 3M, +23.3% in 1M",
+      "warning": "Low AI rating"
+    },
+    {
+      "ticker": "ATI",
+      "price": 137.04,
+      "rating": 5,
+      "momentum_6m": 81.56,
+      "catalyst": "Breakout: +39.7% in 3M, +11.0% in 1M",
       "warning": "Low AI rating"
     },
     {
       "ticker": "CAT",
-      "price": 742.12,
+      "price": 742.37,
       "rating": 7,
-      "momentum_6m": 82.6,
-      "catalyst": "Breakout: +32.1% in 3M, +20.4% in 1M",
+      "momentum_6m": 80.82,
+      "catalyst": "Breakout: +30.4% in 3M, +18.2% in 1M",
       "warning": null
     }
   ],
   "top_buy": [
     {
+      "ticker": "SNDK",
+      "price": 541.64,
+      "rating": 4,
+      "momentum_6m": 1056.61,
+      "catalyst": "Breakout: +102.1% in 3M, +39.1% in 1M",
+      "warning": "Downgraded (rating 4.0 < 5.0)"
+    },
+    {
       "ticker": "AXTI",
-      "price": 27.77,
+      "price": 24.35,
       "rating": 3,
-      "momentum_6m": 1173.85,
-      "catalyst": "Breakout: +193.6% in 3M, +20.8% in 1M",
-      "warning": "Downgraded (rating 3.0 < 5.0)"
+      "momentum_6m": 991.93,
+      "catalyst": "Strong momentum: +991.9% in 6M",
+      "warning": "Low AI rating"
     },
     {
       "ticker": "HYMC",
-      "price": 38.76,
+      "price": 36.65,
       "rating": 2,
-      "momentum_6m": 994.92,
-      "catalyst": "Breakout: +406.7% in 3M, +42.9% in 1M",
+      "momentum_6m": 947.14,
+      "catalyst": "Breakout: +365.1% in 3M, +11.1% in 1M",
       "warning": "Downgraded (rating 2.0 < 5.0)"
     },
     {
-      "ticker": "BE",
-      "price": 155.17,
-      "rating": 5,
-      "momentum_6m": 312.14,
-      "catalyst": "Strong momentum: +312.1% in 6M",
-      "warning": "Low AI rating"
-    },
-    {
-      "ticker": "PL",
-      "price": 24.02,
-      "rating": 4,
-      "momentum_6m": 274.14,
-      "catalyst": "Strong momentum: +274.1% in 6M",
-      "warning": "Low AI rating"
-    },
-    {
       "ticker": "CIFR",
-      "price": 16.76,
+      "price": 17.1,
       "rating": 3,
-      "momentum_6m": 252.1,
-      "catalyst": "Strong momentum: +252.1% in 6M",
+      "momentum_6m": 262.29,
+      "catalyst": "Strong momentum: +262.3% in 6M",
+      "warning": "Low AI rating"
+    },
+    {
+      "ticker": "WULF",
+      "price": 16.63,
+      "rating": 3,
+      "momentum_6m": 217.37,
+      "catalyst": "Strong momentum: +217.4% in 6M",
       "warning": "Low AI rating"
     }
   ],
-  "last_updated": "Feb 10, 2026 \u00b7 09:18 AM"
+  "last_updated": "Feb 10, 2026 \u00b7 04:59 PM"
 }
