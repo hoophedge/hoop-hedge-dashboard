@@ -1,13 +1,13 @@
 {
-  "closed_trades": 1317,
-  "win_rate": 45.4,
-  "cumulative_pnl": 359.5,
-  "avg_return": 0.27,
-  "profit_factor": 1.13,
+  "closed_trades": 1337,
+  "win_rate": 45.7,
+  "cumulative_pnl": 449.9,
+  "avg_return": 0.34,
+  "profit_factor": 1.16,
   "best_trade": 34.4,
-  "trades_this_week": 57,
+  "trades_this_week": 77,
   "max_drawdown": -10.4,
-  "open_positions": 61,
+  "open_positions": 53,
   "version": "18.18",
-  "last_updated": "Feb 10, 2026 \u00b7 09:09 AM"
+  "last_updated": "Feb 10, 2026 \u00b7 12:06 PM"
 }
