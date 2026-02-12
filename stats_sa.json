@@ -1,25 +1,9 @@
 {
   "stocks_scanned": 4905,
-  "strong_buy_count": 149,
-  "buy_count": 588,
-  "watch_count": 128,
+  "strong_buy_count": 143,
+  "buy_count": 561,
+  "watch_count": 127,
   "top_strong_buy": [
-    {
-      "ticker": "MU",
-      "price": 410.34,
-      "rating": 7,
-      "momentum_6m": 230.54,
-      "catalyst": "Breakout: +70.3% in 3M, +21.4% in 1M",
-      "warning": null
-    },
-    {
-      "ticker": "ACMR",
-      "price": 70.68,
-      "rating": 7,
-      "momentum_6m": 177.61,
-      "catalyst": "Breakout: +116.5% in 3M, +37.8% in 1M",
-      "warning": null
-    },
     {
       "ticker": "EGO",
       "price": 46.3,
@@ -29,47 +13,39 @@
       "warning": "Low AI rating"
     },
     {
-      "ticker": "VAL",
-      "price": 88.42,
-      "rating": 5,
-      "momentum_6m": 86.93,
-      "catalyst": "Breakout: +51.9% in 3M, +64.5% in 1M",
-      "warning": "Low AI rating"
-    },
-    {
       "ticker": "ATI",
       "price": 138.72,
       "rating": 5,
       "momentum_6m": 84.17,
       "catalyst": "Breakout: +41.7% in 3M, +11.5% in 1M",
       "warning": "Low AI rating"
+    },
+    {
+      "ticker": "VRT",
+      "price": 248.51,
+      "rating": 6,
+      "momentum_6m": 80.98,
+      "catalyst": "Breakout: +38.8% in 3M, +43.9% in 1M",
+      "warning": null
+    },
+    {
+      "ticker": "AMAT",
+      "price": 339.88,
+      "rating": 7,
+      "momentum_6m": 79.72,
+      "catalyst": "Breakout: +48.9% in 3M, +11.5% in 1M",
+      "warning": null
+    },
+    {
+      "ticker": "TDC",
+      "price": 37.88,
+      "rating": 5,
+      "momentum_6m": 76.93,
+      "catalyst": "Breakout: +35.1% in 3M, +21.4% in 1M",
+      "warning": "Low AI rating"
     }
   ],
   "top_buy": [
-    {
-      "ticker": "SNDK",
-      "price": 599.34,
-      "rating": 4,
-      "momentum_6m": 1174.92,
-      "catalyst": "Breakout: +120.7% in 3M, +53.8% in 1M",
-      "warning": "Downgraded (rating 4.0 < 5.0)"
-    },
-    {
-      "ticker": "AXTI",
-      "price": 26.8,
-      "rating": 3,
-      "momentum_6m": 1129.36,
-      "catalyst": "Breakout: +153.8% in 3M, +24.6% in 1M",
-      "warning": "Downgraded (rating 3.0 < 5.0)"
-    },
-    {
-      "ticker": "GDXU",
-      "price": 383.43,
-      "rating": 1,
-      "momentum_6m": 310.83,
-      "catalyst": "Breakout: +114.8% in 3M, +14.3% in 1M",
-      "warning": "Downgraded (low volume)"
-    },
     {
       "ticker": "WULF",
       "price": 16.03,
@@ -79,13 +55,37 @@
       "warning": "Low AI rating"
     },
     {
-      "ticker": "ANAB",
-      "price": 55.25,
+      "ticker": "ONDS",
+      "price": 9.23,
+      "rating": 2,
+      "momentum_6m": 162.22,
+      "catalyst": "Strong momentum: +162.2% in 6M",
+      "warning": "Low AI rating"
+    },
+    {
+      "ticker": "IREN",
+      "price": 42.67,
+      "rating": 5,
+      "momentum_6m": 140.67,
+      "catalyst": "Strong momentum: +140.7% in 6M",
+      "warning": "Low AI rating"
+    },
+    {
+      "ticker": "BKD",
+      "price": 16.77,
       "rating": 3,
-      "momentum_6m": 166.65,
-      "catalyst": "Breakout: +64.6% in 3M, +14.8% in 1M",
-      "warning": "Downgraded (low volume)"
+      "momentum_6m": 126.93,
+      "catalyst": "Breakout: +64.3% in 3M, +49.7% in 1M",
+      "warning": "Downgraded (rating 3.0 < 5.0)"
+    },
+    {
+      "ticker": "AMKR",
+      "price": 56.17,
+      "rating": 6,
+      "momentum_6m": 126.29,
+      "catalyst": "Strong momentum: +126.3% in 6M",
+      "warning": null
     }
   ],
-  "last_updated": "Feb 11, 2026 \u00b7 04:59 PM"
+  "last_updated": "Feb 12, 2026 \u00b7 09:22 AM"
 }
