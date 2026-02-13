@@ -1,91 +1,91 @@
 {
   "stocks_scanned": 4905,
-  "strong_buy_count": 126,
-  "buy_count": 575,
+  "strong_buy_count": 145,
+  "buy_count": 577,
   "watch_count": 110,
   "top_strong_buy": [
     {
       "ticker": "MU",
-      "price": 413.97,
+      "price": 411.66,
       "rating": 7,
-      "momentum_6m": 230.75,
-      "catalyst": "Breakout: +69.1% in 3M, +24.2% in 1M",
-      "warning": null
-    },
-    {
-      "ticker": "TER",
-      "price": 311.03,
-      "rating": 6,
-      "momentum_6m": 178.64,
-      "catalyst": "Breakout: +73.6% in 3M, +35.1% in 1M",
-      "warning": null
-    },
-    {
-      "ticker": "CGAU",
-      "price": 17.82,
-      "rating": 6,
-      "momentum_6m": 154.21,
-      "catalyst": "Breakout: +43.4% in 3M, +11.7% in 1M",
+      "momentum_6m": 240.93,
+      "catalyst": "Breakout: +73.8% in 3M, +22.3% in 1M",
       "warning": null
     },
     {
       "ticker": "IAG",
-      "price": 20.16,
+      "price": 21.63,
       "rating": 5,
-      "momentum_6m": 152.0,
-      "catalyst": "Breakout: +39.8% in 3M, +13.2% in 1M",
+      "momentum_6m": 165.72,
+      "catalyst": "Breakout: +57.0% in 3M, +23.1% in 1M",
       "warning": "Low AI rating"
     },
     {
-      "ticker": "ACMR",
-      "price": 64.1,
+      "ticker": "AMAT",
+      "price": 354.91,
       "rating": 7,
-      "momentum_6m": 151.57,
-      "catalyst": "Breakout: +89.6% in 3M, +27.0% in 1M",
+      "momentum_6m": 120.47,
+      "catalyst": "Breakout: +59.3% in 3M, +11.2% in 1M",
       "warning": null
+    },
+    {
+      "ticker": "NGD",
+      "price": 11.06,
+      "rating": 7,
+      "momentum_6m": 112.28,
+      "catalyst": "Quality+Momentum: 7.0 rating, +112.3% in 6M",
+      "warning": null
+    },
+    {
+      "ticker": "VAL",
+      "price": 95.96,
+      "rating": 5,
+      "momentum_6m": 112.25,
+      "catalyst": "Breakout: +69.7% in 3M, +75.4% in 1M",
+      "warning": "Low AI rating"
     }
   ],
   "top_buy": [
     {
-      "ticker": "SNDK",
-      "price": 630.29,
-      "rating": 4,
-      "momentum_6m": 1250.24,
-      "catalyst": "Breakout: +122.6% in 3M, +62.5% in 1M",
-      "warning": "Downgraded (rating 4.0 < 5.0)"
-    },
-    {
-      "ticker": "AXTI",
-      "price": 24.79,
-      "rating": 3,
-      "momentum_6m": 1047.69,
-      "catalyst": "Breakout: +125.8% in 3M, +12.2% in 1M",
-      "warning": "Downgraded (rating 3.0 < 5.0)"
-    },
-    {
-      "ticker": "ALMS",
-      "price": 26.8,
+      "ticker": "HYMC",
+      "price": 35.55,
       "rating": 2,
-      "momentum_6m": 510.48,
-      "catalyst": "Breakout: +411.5% in 3M, +10.1% in 1M",
-      "warning": "Downgraded (rating 2.0 < 5.0)"
-    },
-    {
-      "ticker": "LITE",
-      "price": 583.46,
-      "rating": 4,
-      "momentum_6m": 409.04,
-      "catalyst": "Breakout: +129.9% in 3M, +75.9% in 1M",
-      "warning": "Downgraded (rating 4.0 < 5.0)"
-    },
-    {
-      "ticker": "LPTH",
-      "price": 12.48,
-      "rating": 2,
-      "momentum_6m": 242.86,
-      "catalyst": "Strong momentum: +242.9% in 6M",
+      "momentum_6m": 833.07,
+      "catalyst": "Strong momentum: +833.1% in 6M",
       "warning": "Low AI rating"
+    },
+    {
+      "ticker": "PRAX",
+      "price": 317.25,
+      "rating": 3,
+      "momentum_6m": 573.85,
+      "catalyst": "Strong momentum: +573.9% in 6M",
+      "warning": "Low AI rating"
+    },
+    {
+      "ticker": "BIOA",
+      "price": 19.57,
+      "rating": 2,
+      "momentum_6m": 330.11,
+      "catalyst": "Strong momentum: +330.1% in 6M",
+      "warning": "Low AI rating"
+    },
+    {
+      "ticker": "CIFR",
+      "price": 16.42,
+      "rating": 3,
+      "momentum_6m": 215.16,
+      "catalyst": "Strong momentum: +215.2% in 6M",
+      "warning": "Low AI rating"
+    },
+    {
+      "ticker": "ALM",
+      "price": 13.84,
+      "rating": 1,
+      "momentum_6m": 208.93,
+      "catalyst": "Breakout: +102.3% in 3M, +53.8% in 1M",
+      "warning": "Downgraded (rating 1.0 < 5.0)"
     }
   ],
-  "last_updated": "Feb 13, 2026 \u00b7 09:20 AM"
+  "last_updated": "Feb 13, 2026 \u00b7 05:04 PM"
 }
