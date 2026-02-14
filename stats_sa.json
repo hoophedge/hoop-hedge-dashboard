@@ -1,8 +1,8 @@
 {
   "stocks_scanned": 4905,
-  "strong_buy_count": 146,
-  "buy_count": 576,
-  "watch_count": 110,
+  "strong_buy_count": 147,
+  "buy_count": 579,
+  "watch_count": 112,
   "top_strong_buy": [
     {
       "ticker": "MU",
@@ -11,14 +11,6 @@
       "momentum_6m": 240.93,
       "catalyst": "Breakout: +73.8% in 3M, +22.3% in 1M",
       "warning": null
-    },
-    {
-      "ticker": "CIEN",
-      "price": 303.92,
-      "rating": 5,
-      "momentum_6m": 234.46,
-      "catalyst": "Breakout: +56.5% in 3M, +24.7% in 1M",
-      "warning": "Low AI rating"
     },
     {
       "ticker": "IAG",
@@ -43,6 +35,14 @@
       "momentum_6m": 112.25,
       "catalyst": "Breakout: +69.7% in 3M, +75.4% in 1M",
       "warning": "Low AI rating"
+    },
+    {
+      "ticker": "ASML",
+      "price": 1406.61,
+      "rating": 7,
+      "momentum_6m": 90.12,
+      "catalyst": "Quality+Momentum: 7.0 rating, +90.1% in 6M",
+      "warning": null
     }
   ],
   "top_buy": [
@@ -71,21 +71,21 @@
       "warning": "Low AI rating"
     },
     {
+      "ticker": "VICR",
+      "price": 155.96,
+      "rating": 5,
+      "momentum_6m": 227.3,
+      "catalyst": "Strong momentum: +227.3% in 6M",
+      "warning": "Low AI rating"
+    },
+    {
       "ticker": "CIFR",
       "price": 16.42,
       "rating": 3,
       "momentum_6m": 215.16,
       "catalyst": "Strong momentum: +215.2% in 6M",
       "warning": "Low AI rating"
-    },
-    {
-      "ticker": "ALM",
-      "price": 13.84,
-      "rating": 1,
-      "momentum_6m": 208.93,
-      "catalyst": "Breakout: +102.3% in 3M, +53.8% in 1M",
-      "warning": "Downgraded (rating 1.0 < 5.0)"
     }
   ],
-  "last_updated": "Feb 14, 2026 \u00b7 09:17 AM"
+  "last_updated": "Feb 14, 2026 \u00b7 05:01 PM"
 }
