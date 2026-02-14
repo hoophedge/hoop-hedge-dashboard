@@ -1,7 +1,7 @@
 {
   "stocks_scanned": 4905,
-  "strong_buy_count": 145,
-  "buy_count": 577,
+  "strong_buy_count": 146,
+  "buy_count": 576,
   "watch_count": 110,
   "top_strong_buy": [
     {
@@ -11,6 +11,14 @@
       "momentum_6m": 240.93,
       "catalyst": "Breakout: +73.8% in 3M, +22.3% in 1M",
       "warning": null
+    },
+    {
+      "ticker": "CIEN",
+      "price": 303.92,
+      "rating": 5,
+      "momentum_6m": 234.46,
+      "catalyst": "Breakout: +56.5% in 3M, +24.7% in 1M",
+      "warning": "Low AI rating"
     },
     {
       "ticker": "IAG",
@@ -26,14 +34,6 @@
       "rating": 7,
       "momentum_6m": 120.47,
       "catalyst": "Breakout: +59.3% in 3M, +11.2% in 1M",
-      "warning": null
-    },
-    {
-      "ticker": "NGD",
-      "price": 11.06,
-      "rating": 7,
-      "momentum_6m": 112.28,
-      "catalyst": "Quality+Momentum: 7.0 rating, +112.3% in 6M",
       "warning": null
     },
     {
@@ -87,5 +87,5 @@
       "warning": "Downgraded (rating 1.0 < 5.0)"
     }
   ],
-  "last_updated": "Feb 13, 2026 \u00b7 05:04 PM"
+  "last_updated": "Feb 14, 2026 \u00b7 09:17 AM"
 }
