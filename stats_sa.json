@@ -63,6 +63,14 @@
       "warning": "Low AI rating"
     },
     {
+      "ticker": "LITE",
+      "price": 562.74,
+      "rating": 4,
+      "momentum_6m": 385.71,
+      "catalyst": "Breakout: +148.1% in 3M, +63.9% in 1M",
+      "warning": "Downgraded (rating 4.0 < 5.0)"
+    },
+    {
       "ticker": "BIOA",
       "price": 19.57,
       "rating": 2,
@@ -77,15 +85,7 @@
       "momentum_6m": 227.3,
       "catalyst": "Strong momentum: +227.3% in 6M",
       "warning": "Low AI rating"
-    },
-    {
-      "ticker": "CIFR",
-      "price": 16.42,
-      "rating": 3,
-      "momentum_6m": 215.16,
-      "catalyst": "Strong momentum: +215.2% in 6M",
-      "warning": "Low AI rating"
     }
   ],
-  "last_updated": "Feb 15, 2026 \u00b7 09:17 AM"
+  "last_updated": "Feb 15, 2026 \u00b7 04:58 PM"
 }
