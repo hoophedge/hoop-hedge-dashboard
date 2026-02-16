@@ -5,14 +5,6 @@
   "watch_count": 112,
   "top_strong_buy": [
     {
-      "ticker": "WDC",
-      "price": 281.58,
-      "rating": 5,
-      "momentum_6m": 275.88,
-      "catalyst": "Breakout: +79.3% in 3M, +26.8% in 1M",
-      "warning": "Low AI rating"
-    },
-    {
       "ticker": "MU",
       "price": 411.66,
       "rating": 7,
@@ -43,6 +35,14 @@
       "momentum_6m": 112.25,
       "catalyst": "Breakout: +69.7% in 3M, +75.4% in 1M",
       "warning": "Low AI rating"
+    },
+    {
+      "ticker": "NE",
+      "price": 45.82,
+      "rating": 6,
+      "momentum_6m": 75.95,
+      "catalyst": "Breakout: +56.8% in 3M, +38.9% in 1M",
+      "warning": null
     }
   ],
   "top_buy": [
@@ -63,14 +63,6 @@
       "warning": "Low AI rating"
     },
     {
-      "ticker": "LITE",
-      "price": 562.74,
-      "rating": 4,
-      "momentum_6m": 385.71,
-      "catalyst": "Breakout: +148.1% in 3M, +63.9% in 1M",
-      "warning": "Downgraded (rating 4.0 < 5.0)"
-    },
-    {
       "ticker": "BIOA",
       "price": 19.57,
       "rating": 2,
@@ -85,7 +77,15 @@
       "momentum_6m": 227.3,
       "catalyst": "Strong momentum: +227.3% in 6M",
       "warning": "Low AI rating"
+    },
+    {
+      "ticker": "CIFR",
+      "price": 16.42,
+      "rating": 3,
+      "momentum_6m": 215.16,
+      "catalyst": "Strong momentum: +215.2% in 6M",
+      "warning": "Low AI rating"
     }
   ],
-  "last_updated": "Feb 15, 2026 \u00b7 04:58 PM"
+  "last_updated": "Feb 16, 2026 \u00b7 09:18 AM"
 }
