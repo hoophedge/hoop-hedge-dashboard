@@ -1,91 +1,91 @@
 {
   "stocks_scanned": 4905,
   "strong_buy_count": 147,
-  "buy_count": 579,
-  "watch_count": 112,
+  "buy_count": 586,
+  "watch_count": 106,
   "top_strong_buy": [
     {
       "ticker": "MU",
-      "price": 411.66,
+      "price": 399.78,
       "rating": 7,
-      "momentum_6m": 240.93,
-      "catalyst": "Breakout: +73.8% in 3M, +22.3% in 1M",
+      "momentum_6m": 223.91,
+      "catalyst": "Breakout: +62.0% in 3M, +10.2% in 1M",
       "warning": null
     },
     {
-      "ticker": "IAG",
-      "price": 21.63,
+      "ticker": "ATI",
+      "price": 146.75,
       "rating": 5,
-      "momentum_6m": 165.72,
-      "catalyst": "Breakout: +57.0% in 3M, +23.1% in 1M",
+      "momentum_6m": 102.25,
+      "catalyst": "Breakout: +47.7% in 3M, +18.0% in 1M",
       "warning": "Low AI rating"
-    },
-    {
-      "ticker": "AMAT",
-      "price": 354.91,
-      "rating": 7,
-      "momentum_6m": 120.47,
-      "catalyst": "Breakout: +59.3% in 3M, +11.2% in 1M",
-      "warning": null
     },
     {
       "ticker": "VAL",
-      "price": 95.96,
+      "price": 88.96,
       "rating": 5,
-      "momentum_6m": 112.25,
-      "catalyst": "Breakout: +69.7% in 3M, +75.4% in 1M",
+      "momentum_6m": 93.52,
+      "catalyst": "Breakout: +56.0% in 3M, +64.8% in 1M",
       "warning": "Low AI rating"
     },
     {
-      "ticker": "NE",
-      "price": 45.82,
-      "rating": 6,
-      "momentum_6m": 75.95,
-      "catalyst": "Breakout: +56.8% in 3M, +38.9% in 1M",
+      "ticker": "TWST",
+      "price": 52.88,
+      "rating": 5,
+      "momentum_6m": 88.72,
+      "catalyst": "Breakout: +96.8% in 3M, +27.7% in 1M",
+      "warning": "Low AI rating"
+    },
+    {
+      "ticker": "NXT",
+      "price": 122.59,
+      "rating": 7,
+      "momentum_6m": 81.08,
+      "catalyst": "Breakout: +30.8% in 3M, +27.2% in 1M",
       "warning": null
     }
   ],
   "top_buy": [
     {
-      "ticker": "HYMC",
-      "price": 35.55,
-      "rating": 2,
-      "momentum_6m": 833.07,
-      "catalyst": "Strong momentum: +833.1% in 6M",
-      "warning": "Low AI rating"
+      "ticker": "SNDK",
+      "price": 590.59,
+      "rating": 4,
+      "momentum_6m": 1197.43,
+      "catalyst": "Breakout: +132.4% in 3M, +42.8% in 1M",
+      "warning": "Downgraded (rating 4.0 < 5.0)"
     },
     {
-      "ticker": "PRAX",
-      "price": 317.25,
-      "rating": 3,
-      "momentum_6m": 573.85,
-      "catalyst": "Strong momentum: +573.9% in 6M",
-      "warning": "Low AI rating"
+      "ticker": "LITE",
+      "price": 600.42,
+      "rating": 4,
+      "momentum_6m": 404.64,
+      "catalyst": "Breakout: +158.6% in 3M, +85.2% in 1M",
+      "warning": "Downgraded (rating 4.0 < 5.0)"
     },
     {
-      "ticker": "BIOA",
-      "price": 19.57,
-      "rating": 2,
-      "momentum_6m": 330.11,
-      "catalyst": "Strong momentum: +330.1% in 6M",
-      "warning": "Low AI rating"
+      "ticker": "PACS",
+      "price": 41.01,
+      "rating": 6,
+      "momentum_6m": 259.42,
+      "catalyst": "Strong momentum: +259.4% in 6M",
+      "warning": null
     },
     {
-      "ticker": "VICR",
-      "price": 155.96,
-      "rating": 5,
-      "momentum_6m": 227.3,
-      "catalyst": "Strong momentum: +227.3% in 6M",
+      "ticker": "HL",
+      "price": 21.24,
+      "rating": 4,
+      "momentum_6m": 174.29,
+      "catalyst": "Strong momentum: +174.3% in 6M",
       "warning": "Low AI rating"
     },
     {
       "ticker": "CIFR",
-      "price": 16.42,
+      "price": 15.64,
       "rating": 3,
-      "momentum_6m": 215.16,
-      "catalyst": "Strong momentum: +215.2% in 6M",
+      "momentum_6m": 158.51,
+      "catalyst": "Strong momentum: +158.5% in 6M",
       "warning": "Low AI rating"
     }
   ],
-  "last_updated": "Feb 16, 2026 \u00b7 09:18 AM"
+  "last_updated": "Feb 17, 2026 \u00b7 05:11 PM"
 }
