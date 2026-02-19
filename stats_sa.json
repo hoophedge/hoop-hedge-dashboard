@@ -1,91 +1,91 @@
 {
   "stocks_scanned": 4905,
   "strong_buy_count": 154,
-  "buy_count": 585,
-  "watch_count": 95,
+  "buy_count": 616,
+  "watch_count": 86,
   "top_strong_buy": [
     {
+      "ticker": "CIEN",
+      "price": 318.41,
+      "rating": 5,
+      "momentum_6m": 267.51,
+      "catalyst": "Breakout: +70.3% in 3M, +37.3% in 1M",
+      "warning": "Low AI rating"
+    },
+    {
       "ticker": "MU",
-      "price": 416.94,
+      "price": 417.35,
       "rating": 7,
-      "momentum_6m": 223.91,
-      "catalyst": "Breakout: +62.0% in 3M, +10.2% in 1M",
+      "momentum_6m": 256.44,
+      "catalyst": "Quality+Momentum: 7.0 rating, +256.4% in 6M",
       "warning": null
     },
     {
       "ticker": "NGD",
-      "price": 12.03,
+      "price": 11.9,
       "rating": 7,
-      "momentum_6m": 125.86,
-      "catalyst": "Quality+Momentum: 7.0 rating, +125.9% in 6M",
+      "momentum_6m": 126.24,
+      "catalyst": "Quality+Momentum: 7.0 rating, +126.2% in 6M",
       "warning": null
     },
     {
       "ticker": "EQX",
-      "price": 16.52,
+      "price": 16.98,
       "rating": 6,
-      "momentum_6m": 112.97,
-      "catalyst": "Breakout: +31.0% in 3M, +11.3% in 1M",
+      "momentum_6m": 119.1,
+      "catalyst": "Breakout: +34.8% in 3M, +14.5% in 1M",
       "warning": null
     },
     {
       "ticker": "ATI",
-      "price": 151.71,
+      "price": 152.84,
       "rating": 5,
-      "momentum_6m": 102.25,
-      "catalyst": "Breakout: +47.7% in 3M, +18.0% in 1M",
-      "warning": "Low AI rating"
-    },
-    {
-      "ticker": "FTI",
-      "price": 59.53,
-      "rating": 5,
-      "momentum_6m": 72.15,
-      "catalyst": "Breakout: +36.6% in 3M, +10.3% in 1M",
+      "momentum_6m": 114.24,
+      "catalyst": "Breakout: +55.7% in 3M, +22.6% in 1M",
       "warning": "Low AI rating"
     }
   ],
   "top_buy": [
     {
-      "ticker": "SNDK",
-      "price": 622.24,
+      "ticker": "ALMS",
+      "price": 29.2,
+      "rating": 2,
+      "momentum_6m": 562.24,
+      "catalyst": "Strong momentum: +562.2% in 6M",
+      "warning": "Low AI rating"
+    },
+    {
+      "ticker": "LITE",
+      "price": 635.64,
       "rating": 4,
-      "momentum_6m": 1307.03,
-      "catalyst": "Breakout: +155.1% in 3M, +24.6% in 1M",
+      "momentum_6m": 448.49,
+      "catalyst": "Breakout: +156.9% in 3M, +75.4% in 1M",
       "warning": "Downgraded (rating 4.0 < 5.0)"
     },
     {
-      "ticker": "ALMS",
-      "price": 29.88,
+      "ticker": "CAPR",
+      "price": 29.15,
       "rating": 2,
-      "momentum_6m": 582.54,
-      "catalyst": "Breakout: +369.6% in 3M, +12.8% in 1M",
+      "momentum_6m": 306.56,
+      "catalyst": "Breakout: +416.8% in 3M, +19.9% in 1M",
       "warning": "Downgraded (rating 2.0 < 5.0)"
     },
     {
-      "ticker": "GDXU",
-      "price": 347.92,
-      "rating": 1,
-      "momentum_6m": 267.27,
-      "catalyst": "Strong momentum: +267.3% in 6M",
-      "warning": "Low AI rating"
-    },
-    {
-      "ticker": "FSLY",
-      "price": 19.93,
-      "rating": 4,
-      "momentum_6m": 179.17,
-      "catalyst": "Breakout: +91.6% in 3M, +125.3% in 1M",
-      "warning": "Downgraded (rating 4.0 < 5.0)"
-    },
-    {
-      "ticker": "ONDS",
-      "price": 11.28,
+      "ticker": "LPTH",
+      "price": 13.6,
       "rating": 2,
-      "momentum_6m": 150.62,
-      "catalyst": "Strong momentum: +150.6% in 6M",
+      "momentum_6m": 298.83,
+      "catalyst": "Strong momentum: +298.8% in 6M",
       "warning": "Low AI rating"
+    },
+    {
+      "ticker": "EKSO",
+      "price": 12.3,
+      "rating": 3,
+      "momentum_6m": 277.3,
+      "catalyst": "Breakout: +194.6% in 3M, +56.7% in 1M",
+      "warning": "Downgraded (rating 3.0 < 5.0)"
     }
   ],
-  "last_updated": "Feb 19, 2026 \u00b7 11:24 AM"
+  "last_updated": "Feb 19, 2026 \u00b7 05:26 PM"
 }
