@@ -1,8 +1,8 @@
 {
   "stocks_scanned": 4905,
-  "strong_buy_count": 144,
-  "buy_count": 563,
-  "watch_count": 94,
+  "strong_buy_count": 160,
+  "buy_count": 617,
+  "watch_count": 101,
   "top_strong_buy": [
     {
       "ticker": "CIEN",
@@ -11,6 +11,14 @@
       "momentum_6m": 283.41,
       "catalyst": "Breakout: +77.4% in 3M, +45.6% in 1M",
       "warning": "Low AI rating"
+    },
+    {
+      "ticker": "MU",
+      "price": 428.17,
+      "rating": 7,
+      "momentum_6m": 270.16,
+      "catalyst": "Quality+Momentum: 7.0 rating, +270.2% in 6M",
+      "warning": null
     },
     {
       "ticker": "COHR",
@@ -35,14 +43,6 @@
       "momentum_6m": 135.31,
       "catalyst": "Breakout: +60.0% in 3M, +17.8% in 1M",
       "warning": null
-    },
-    {
-      "ticker": "TNDM",
-      "price": 24.57,
-      "rating": 5,
-      "momentum_6m": 122.35,
-      "catalyst": "Breakout: +31.1% in 3M, +19.3% in 1M",
-      "warning": "Low AI rating"
     }
   ],
   "top_buy": [
@@ -53,6 +53,14 @@
       "momentum_6m": 1096.77,
       "catalyst": "Breakout: +193.6% in 3M, +65.6% in 1M",
       "warning": "Downgraded (rating 3.0 < 5.0)"
+    },
+    {
+      "ticker": "LITE",
+      "price": 667.77,
+      "rating": 4,
+      "momentum_6m": 468.65,
+      "catalyst": "Breakout: +148.3% in 3M, +88.4% in 1M",
+      "warning": "Downgraded (rating 4.0 < 5.0)"
     },
     {
       "ticker": "GDXU",
@@ -77,15 +85,7 @@
       "momentum_6m": 244.39,
       "catalyst": "Breakout: +140.5% in 3M, +40.8% in 1M",
       "warning": "Downgraded (rating 1.0 < 5.0)"
-    },
-    {
-      "ticker": "BE",
-      "price": 147.55,
-      "rating": 5,
-      "momentum_6m": 229.13,
-      "catalyst": "Strong momentum: +229.1% in 6M",
-      "warning": "Low AI rating"
     }
   ],
-  "last_updated": "Feb 21, 2026 \u00b7 09:18 AM"
+  "last_updated": "Feb 21, 2026 \u00b7 04:57 PM"
 }
