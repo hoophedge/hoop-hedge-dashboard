@@ -1,91 +1,91 @@
 {
   "stocks_scanned": 4905,
-  "strong_buy_count": 154,
-  "buy_count": 616,
-  "watch_count": 86,
+  "strong_buy_count": 144,
+  "buy_count": 563,
+  "watch_count": 94,
   "top_strong_buy": [
     {
       "ticker": "CIEN",
-      "price": 318.41,
+      "price": 334.95,
       "rating": 5,
-      "momentum_6m": 267.51,
-      "catalyst": "Breakout: +70.3% in 3M, +37.3% in 1M",
+      "momentum_6m": 283.41,
+      "catalyst": "Breakout: +77.4% in 3M, +45.6% in 1M",
       "warning": "Low AI rating"
     },
     {
-      "ticker": "MU",
-      "price": 417.35,
-      "rating": 7,
-      "momentum_6m": 256.44,
-      "catalyst": "Quality+Momentum: 7.0 rating, +256.4% in 6M",
-      "warning": null
-    },
-    {
-      "ticker": "NGD",
-      "price": 11.9,
-      "rating": 7,
-      "momentum_6m": 126.24,
-      "catalyst": "Quality+Momentum: 7.0 rating, +126.2% in 6M",
-      "warning": null
-    },
-    {
-      "ticker": "EQX",
-      "price": 16.98,
-      "rating": 6,
-      "momentum_6m": 119.1,
-      "catalyst": "Breakout: +34.8% in 3M, +14.5% in 1M",
-      "warning": null
-    },
-    {
-      "ticker": "ATI",
-      "price": 152.84,
+      "ticker": "COHR",
+      "price": 248.18,
       "rating": 5,
-      "momentum_6m": 114.24,
-      "catalyst": "Breakout: +55.7% in 3M, +22.6% in 1M",
+      "momentum_6m": 186.58,
+      "catalyst": "Breakout: +73.6% in 3M, +22.4% in 1M",
+      "warning": "Low AI rating"
+    },
+    {
+      "ticker": "TTMI",
+      "price": 107.93,
+      "rating": 5,
+      "momentum_6m": 164.66,
+      "catalyst": "Breakout: +67.9% in 3M, +10.7% in 1M",
+      "warning": "Low AI rating"
+    },
+    {
+      "ticker": "AMAT",
+      "price": 375.38,
+      "rating": 7,
+      "momentum_6m": 135.31,
+      "catalyst": "Breakout: +60.0% in 3M, +17.8% in 1M",
+      "warning": null
+    },
+    {
+      "ticker": "TNDM",
+      "price": 24.57,
+      "rating": 5,
+      "momentum_6m": 122.35,
+      "catalyst": "Breakout: +31.1% in 3M, +19.3% in 1M",
       "warning": "Low AI rating"
     }
   ],
   "top_buy": [
     {
-      "ticker": "ALMS",
-      "price": 29.2,
-      "rating": 2,
-      "momentum_6m": 562.24,
-      "catalyst": "Strong momentum: +562.2% in 6M",
-      "warning": "Low AI rating"
-    },
-    {
-      "ticker": "LITE",
-      "price": 635.64,
-      "rating": 4,
-      "momentum_6m": 448.49,
-      "catalyst": "Breakout: +156.9% in 3M, +75.4% in 1M",
-      "warning": "Downgraded (rating 4.0 < 5.0)"
-    },
-    {
-      "ticker": "CAPR",
-      "price": 29.15,
-      "rating": 2,
-      "momentum_6m": 306.56,
-      "catalyst": "Breakout: +416.8% in 3M, +19.9% in 1M",
-      "warning": "Downgraded (rating 2.0 < 5.0)"
-    },
-    {
-      "ticker": "LPTH",
-      "price": 13.6,
-      "rating": 2,
-      "momentum_6m": 298.83,
-      "catalyst": "Strong momentum: +298.8% in 6M",
-      "warning": "Low AI rating"
-    },
-    {
-      "ticker": "EKSO",
-      "price": 12.3,
+      "ticker": "AXTI",
+      "price": 29.68,
       "rating": 3,
-      "momentum_6m": 277.3,
-      "catalyst": "Breakout: +194.6% in 3M, +56.7% in 1M",
+      "momentum_6m": 1096.77,
+      "catalyst": "Breakout: +193.6% in 3M, +65.6% in 1M",
       "warning": "Downgraded (rating 3.0 < 5.0)"
+    },
+    {
+      "ticker": "GDXU",
+      "price": 372.15,
+      "rating": 1,
+      "momentum_6m": 278.55,
+      "catalyst": "Strong momentum: +278.5% in 6M",
+      "warning": "Low AI rating"
+    },
+    {
+      "ticker": "VICR",
+      "price": 170.01,
+      "rating": 5,
+      "momentum_6m": 263.97,
+      "catalyst": "Strong momentum: +264.0% in 6M",
+      "warning": "Low AI rating"
+    },
+    {
+      "ticker": "ALM",
+      "price": 14.74,
+      "rating": 1,
+      "momentum_6m": 244.39,
+      "catalyst": "Breakout: +140.5% in 3M, +40.8% in 1M",
+      "warning": "Downgraded (rating 1.0 < 5.0)"
+    },
+    {
+      "ticker": "BE",
+      "price": 147.55,
+      "rating": 5,
+      "momentum_6m": 229.13,
+      "catalyst": "Strong momentum: +229.1% in 6M",
+      "warning": "Low AI rating"
     }
   ],
-  "last_updated": "Feb 19, 2026 \u00b7 05:26 PM"
+  "last_updated": "Feb 21, 2026 \u00b7 09:18 AM"
 }
