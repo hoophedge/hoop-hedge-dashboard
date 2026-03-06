@@ -1,91 +1,91 @@
 {
   "stocks_scanned": 4905,
-  "strong_buy_count": 109,
-  "buy_count": 511,
-  "watch_count": 85,
+  "strong_buy_count": 110,
+  "buy_count": 475,
+  "watch_count": 110,
   "top_strong_buy": [
     {
-      "ticker": "COHR",
-      "price": 253.87,
+      "ticker": "MU",
+      "price": 370.3,
+      "rating": 7,
+      "momentum_6m": 182.17,
+      "catalyst": "Quality+Momentum: 7.0 rating, +182.2% in 6M",
+      "warning": null
+    },
+    {
+      "ticker": "VIAV",
+      "price": 27.88,
       "rating": 5,
-      "momentum_6m": 165.5,
-      "catalyst": "Breakout: +48.5% in 3M, +20.3% in 1M",
+      "momentum_6m": 139.11,
+      "catalyst": "Breakout: +59.3% in 3M, +10.1% in 1M",
       "warning": "Low AI rating"
     },
     {
-      "ticker": "CIEN",
-      "price": 299.3,
+      "ticker": "UCTT",
+      "price": 50.56,
       "rating": 5,
-      "momentum_6m": 155.99,
-      "catalyst": "Breakout: +54.8% in 3M, +18.1% in 1M",
+      "momentum_6m": 107.38,
+      "catalyst": "Breakout: +92.0% in 3M, +15.3% in 1M",
       "warning": "Low AI rating"
     },
     {
       "ticker": "AMAT",
-      "price": 346.53,
+      "price": 324.74,
       "rating": 7,
-      "momentum_6m": 119.69,
-      "catalyst": "Quality+Momentum: 7.0 rating, +119.7% in 6M",
+      "momentum_6m": 100.17,
+      "catalyst": "Quality+Momentum: 7.0 rating, +100.2% in 6M",
       "warning": null
     },
     {
-      "ticker": "GLW",
-      "price": 134.74,
-      "rating": 5,
-      "momentum_6m": 94.28,
-      "catalyst": "Breakout: +61.6% in 3M, +23.1% in 1M",
-      "warning": "Low AI rating"
-    },
-    {
-      "ticker": "ACMR",
-      "price": 48.31,
+      "ticker": "ASML",
+      "price": 1292.8,
       "rating": 7,
-      "momentum_6m": 79.06,
-      "catalyst": "Quality+Momentum: 7.0 rating, +79.1% in 6M",
+      "momentum_6m": 65.9,
+      "catalyst": "Quality+Momentum: 7.0 rating, +65.9% in 6M",
       "warning": null
     }
   ],
   "top_buy": [
     {
-      "ticker": "HYMC",
-      "price": 41.06,
+      "ticker": "AXTI",
+      "price": 32.37,
+      "rating": 3,
+      "momentum_6m": 940.84,
+      "catalyst": "Breakout: +167.5% in 3M, +58.4% in 1M",
+      "warning": "Downgraded (rating 3.0 < 5.0)"
+    },
+    {
+      "ticker": "CAPR",
+      "price": 27.9,
       "rating": 2,
-      "momentum_6m": 645.19,
-      "catalyst": "Strong momentum: +645.2% in 6M",
+      "momentum_6m": 313.95,
+      "catalyst": "Strong momentum: +313.9% in 6M",
       "warning": "Low AI rating"
     },
     {
-      "ticker": "VICR",
-      "price": 181.92,
-      "rating": 5,
-      "momentum_6m": 250.52,
-      "catalyst": "Breakout: +96.0% in 3M, +19.6% in 1M",
-      "warning": "Downgraded (low volume)"
+      "ticker": "AAOI",
+      "price": 95.58,
+      "rating": 3,
+      "momentum_6m": 298.42,
+      "catalyst": "Breakout: +264.3% in 3M, +150.7% in 1M",
+      "warning": "Downgraded (rating 3.0 < 5.0)"
     },
     {
-      "ticker": "AUGO",
-      "price": 81.75,
+      "ticker": "LITE",
+      "price": 558.44,
       "rating": 4,
-      "momentum_6m": 168.3,
-      "catalyst": "Breakout: +95.8% in 3M, +28.9% in 1M",
-      "warning": "Downgraded (low volume)"
-    },
-    {
-      "ticker": "TNGX",
-      "price": 16.83,
-      "rating": 4,
-      "momentum_6m": 146.41,
-      "catalyst": "Breakout: +75.9% in 3M, +36.6% in 1M",
+      "momentum_6m": 273.64,
+      "catalyst": "Breakout: +70.3% in 3M, +10.7% in 1M",
       "warning": "Downgraded (rating 4.0 < 5.0)"
     },
     {
-      "ticker": "SVM",
-      "price": 11.84,
-      "rating": 3,
-      "momentum_6m": 139.68,
-      "catalyst": "Breakout: +49.1% in 3M, +11.5% in 1M",
-      "warning": "Downgraded (rating 3.0 < 5.0)"
+      "ticker": "VICR",
+      "price": 162.67,
+      "rating": 5,
+      "momentum_6m": 214.03,
+      "catalyst": "Strong momentum: +214.0% in 6M",
+      "warning": "Low AI rating"
     }
   ],
-  "last_updated": "Mar 06, 2026 \u00b7 09:17 AM"
+  "last_updated": "Mar 06, 2026 \u00b7 05:08 PM"
 }
