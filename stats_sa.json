@@ -1,8 +1,8 @@
 {
   "stocks_scanned": 4905,
-  "strong_buy_count": 110,
+  "strong_buy_count": 109,
   "buy_count": 475,
-  "watch_count": 110,
+  "watch_count": 111,
   "top_strong_buy": [
     {
       "ticker": "MU",
@@ -11,14 +11,6 @@
       "momentum_6m": 182.17,
       "catalyst": "Quality+Momentum: 7.0 rating, +182.2% in 6M",
       "warning": null
-    },
-    {
-      "ticker": "COHR",
-      "price": 235.72,
-      "rating": 5,
-      "momentum_6m": 140.92,
-      "catalyst": "Breakout: +32.9% in 3M, +12.7% in 1M",
-      "warning": "Low AI rating"
     },
     {
       "ticker": "VIAV",
@@ -42,6 +34,14 @@
       "rating": 7,
       "momentum_6m": 100.17,
       "catalyst": "Quality+Momentum: 7.0 rating, +100.2% in 6M",
+      "warning": null
+    },
+    {
+      "ticker": "VRT",
+      "price": 241.78,
+      "rating": 6,
+      "momentum_6m": 95.11,
+      "catalyst": "Breakout: +32.5% in 3M, +36.0% in 1M",
       "warning": null
     }
   ],
@@ -87,5 +87,5 @@
       "warning": "Low AI rating"
     }
   ],
-  "last_updated": "Mar 07, 2026 \u00b7 09:17 AM"
+  "last_updated": "Mar 07, 2026 \u00b7 04:58 PM"
 }
