@@ -13,6 +13,14 @@
       "warning": null
     },
     {
+      "ticker": "COHR",
+      "price": 235.72,
+      "rating": 5,
+      "momentum_6m": 140.92,
+      "catalyst": "Breakout: +32.9% in 3M, +12.7% in 1M",
+      "warning": "Low AI rating"
+    },
+    {
       "ticker": "VIAV",
       "price": 27.88,
       "rating": 5,
@@ -34,14 +42,6 @@
       "rating": 7,
       "momentum_6m": 100.17,
       "catalyst": "Quality+Momentum: 7.0 rating, +100.2% in 6M",
-      "warning": null
-    },
-    {
-      "ticker": "ASML",
-      "price": 1292.8,
-      "rating": 7,
-      "momentum_6m": 65.9,
-      "catalyst": "Quality+Momentum: 7.0 rating, +65.9% in 6M",
       "warning": null
     }
   ],
@@ -87,5 +87,5 @@
       "warning": "Low AI rating"
     }
   ],
-  "last_updated": "Mar 06, 2026 \u00b7 05:08 PM"
+  "last_updated": "Mar 07, 2026 \u00b7 09:17 AM"
 }
