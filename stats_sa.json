@@ -1,12 +1,12 @@
 {
   "stocks_scanned": 4905,
   "strong_buy_count": 109,
-  "buy_count": 475,
+  "buy_count": 476,
   "watch_count": 111,
   "top_strong_buy": [
     {
       "ticker": "MU",
-      "price": 370.3,
+      "price": 370.31,
       "rating": 7,
       "momentum_6m": 182.17,
       "catalyst": "Quality+Momentum: 7.0 rating, +182.2% in 6M",
@@ -14,7 +14,7 @@
     },
     {
       "ticker": "VIAV",
-      "price": 27.88,
+      "price": 27.89,
       "rating": 5,
       "momentum_6m": 139.11,
       "catalyst": "Breakout: +59.3% in 3M, +10.1% in 1M",
@@ -22,7 +22,7 @@
     },
     {
       "ticker": "UCTT",
-      "price": 50.56,
+      "price": 50.57,
       "rating": 5,
       "momentum_6m": 107.38,
       "catalyst": "Breakout: +92.0% in 3M, +15.3% in 1M",
@@ -30,33 +30,41 @@
     },
     {
       "ticker": "AMAT",
-      "price": 324.74,
+      "price": 324.75,
       "rating": 7,
       "momentum_6m": 100.17,
       "catalyst": "Quality+Momentum: 7.0 rating, +100.2% in 6M",
       "warning": null
     },
     {
-      "ticker": "VRT",
-      "price": 241.78,
-      "rating": 6,
-      "momentum_6m": 95.11,
-      "catalyst": "Breakout: +32.5% in 3M, +36.0% in 1M",
+      "ticker": "ASML",
+      "price": 1292.81,
+      "rating": 7,
+      "momentum_6m": 65.9,
+      "catalyst": "Quality+Momentum: 7.0 rating, +65.9% in 6M",
       "warning": null
     }
   ],
   "top_buy": [
     {
       "ticker": "AXTI",
-      "price": 32.37,
+      "price": 32.38,
       "rating": 3,
       "momentum_6m": 940.84,
       "catalyst": "Breakout: +167.5% in 3M, +58.4% in 1M",
       "warning": "Downgraded (rating 3.0 < 5.0)"
     },
     {
+      "ticker": "SNDK",
+      "price": 527.34,
+      "rating": 4,
+      "momentum_6m": 669.26,
+      "catalyst": "Strong momentum: +669.3% in 6M",
+      "warning": "Low AI rating"
+    },
+    {
       "ticker": "CAPR",
-      "price": 27.9,
+      "price": 27.91,
       "rating": 2,
       "momentum_6m": 313.95,
       "catalyst": "Strong momentum: +313.9% in 6M",
@@ -64,7 +72,7 @@
     },
     {
       "ticker": "AAOI",
-      "price": 95.58,
+      "price": 95.59,
       "rating": 3,
       "momentum_6m": 298.42,
       "catalyst": "Breakout: +264.3% in 3M, +150.7% in 1M",
@@ -72,20 +80,12 @@
     },
     {
       "ticker": "LITE",
-      "price": 558.44,
+      "price": 558.45,
       "rating": 4,
       "momentum_6m": 273.64,
       "catalyst": "Breakout: +70.3% in 3M, +10.7% in 1M",
       "warning": "Downgraded (rating 4.0 < 5.0)"
-    },
-    {
-      "ticker": "VICR",
-      "price": 162.67,
-      "rating": 5,
-      "momentum_6m": 214.03,
-      "catalyst": "Strong momentum: +214.0% in 6M",
-      "warning": "Low AI rating"
     }
   ],
-  "last_updated": "Mar 07, 2026 \u00b7 04:58 PM"
+  "last_updated": "Mar 08, 2026 \u00b7 10:17 AM"
 }
