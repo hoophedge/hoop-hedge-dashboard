@@ -1,91 +1,91 @@
 {
   "stocks_scanned": 4905,
-  "strong_buy_count": 109,
-  "buy_count": 472,
-  "watch_count": 107,
+  "strong_buy_count": 102,
+  "buy_count": 503,
+  "watch_count": 88,
   "top_strong_buy": [
     {
       "ticker": "MU",
-      "price": 379.26,
+      "price": 389.32,
       "rating": 7,
-      "momentum_6m": 182.17,
-      "catalyst": "Quality+Momentum: 7.0 rating, +182.2% in 6M",
+      "momentum_6m": 196.46,
+      "catalyst": "Quality+Momentum: 7.0 rating, +196.5% in 6M",
       "warning": null
     },
     {
       "ticker": "CIEN",
-      "price": 308.83,
+      "price": 318.54,
       "rating": 5,
-      "momentum_6m": 152.1,
-      "catalyst": "Breakout: +50.3% in 3M, +16.3% in 1M",
+      "momentum_6m": 167.68,
+      "catalyst": "Breakout: +57.9% in 3M, +17.4% in 1M",
+      "warning": "Low AI rating"
+    },
+    {
+      "ticker": "COHR",
+      "price": 252.32,
+      "rating": 5,
+      "momentum_6m": 155.72,
+      "catalyst": "Breakout: +38.8% in 3M, +10.8% in 1M",
       "warning": "Low AI rating"
     },
     {
       "ticker": "FIGS",
-      "price": 15.52,
+      "price": 15.47,
       "rating": 5,
-      "momentum_6m": 125.77,
-      "catalyst": "Breakout: +34.9% in 3M, +43.6% in 1M",
+      "momentum_6m": 126.5,
+      "catalyst": "Breakout: +35.3% in 3M, +44.0% in 1M",
       "warning": "Low AI rating"
     },
     {
       "ticker": "VRT",
-      "price": 262.5,
+      "price": 264.35,
       "rating": 6,
-      "momentum_6m": 115.83,
-      "catalyst": "Breakout: +39.0% in 3M, +34.3% in 1M",
-      "warning": null
-    },
-    {
-      "ticker": "NGD",
-      "price": 10.78,
-      "rating": 7,
-      "momentum_6m": 63.65,
-      "catalyst": "Quality+Momentum: 7.0 rating, +63.7% in 6M",
+      "momentum_6m": 117.14,
+      "catalyst": "Breakout: +39.9% in 3M, +35.2% in 1M",
       "warning": null
     }
   ],
   "top_buy": [
     {
       "ticker": "AXTI",
-      "price": 37.08,
+      "price": 38.56,
       "rating": 3,
-      "momentum_6m": 1075.24,
-      "catalyst": "Breakout: +215.6% in 3M, +51.9% in 1M",
+      "momentum_6m": 1139.87,
+      "catalyst": "Breakout: +233.0% in 3M, +60.3% in 1M",
       "warning": "Downgraded (rating 3.0 < 5.0)"
     },
     {
       "ticker": "SNDK",
-      "price": 571.79,
+      "price": 588.73,
       "rating": 4,
-      "momentum_6m": 706.68,
-      "catalyst": "Strong momentum: +706.7% in 6M",
+      "momentum_6m": 735.14,
+      "catalyst": "Strong momentum: +735.1% in 6M",
       "warning": "Low AI rating"
     },
     {
       "ticker": "CAPR",
-      "price": 30.76,
+      "price": 30.63,
       "rating": 2,
-      "momentum_6m": 372.36,
-      "catalyst": "Strong momentum: +372.4% in 6M",
+      "momentum_6m": 382.36,
+      "catalyst": "Strong momentum: +382.4% in 6M",
       "warning": "Low AI rating"
     },
     {
       "ticker": "AAOI",
-      "price": 103.77,
+      "price": 110.62,
       "rating": 3,
-      "momentum_6m": 330.85,
-      "catalyst": "Breakout: +282.9% in 3M, +129.8% in 1M",
+      "momentum_6m": 368.13,
+      "catalyst": "Breakout: +316.0% in 3M, +149.7% in 1M",
       "warning": "Downgraded (rating 3.0 < 5.0)"
     },
     {
       "ticker": "LITE",
-      "price": 617.17,
+      "price": 640.69,
       "rating": 4,
-      "momentum_6m": 310.85,
-      "catalyst": "Breakout: +85.2% in 3M, +11.2% in 1M",
+      "momentum_6m": 328.84,
+      "catalyst": "Breakout: +93.3% in 3M, +16.1% in 1M",
       "warning": "Downgraded (rating 4.0 < 5.0)"
     }
   ],
-  "last_updated": "Mar 09, 2026 \u00b7 12:24 PM"
+  "last_updated": "Mar 09, 2026 \u00b7 05:59 PM"
 }
