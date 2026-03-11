@@ -1,91 +1,23 @@
 {
-  "stocks_scanned": 4905,
-  "strong_buy_count": 93,
-  "buy_count": 515,
-  "watch_count": 69,
+  "stocks_scanned": 2615,
+  "strong_buy_count": 163,
+  "buy_count": 662,
+  "watch_count": 107,
+  "scan_universe": "S&P 500 + NASDAQ",
+  "scan_duration": "4m 12s",
   "top_strong_buy": [
-    {
-      "ticker": "MU",
-      "price": 403.11,
-      "rating": 7,
-      "momentum_6m": 198.38,
-      "catalyst": "Quality+Momentum: 7.0 rating, +198.4% in 6M",
-      "warning": null
-    },
-    {
-      "ticker": "CIEN",
-      "price": 337.36,
-      "rating": 5,
-      "momentum_6m": 176.09,
-      "catalyst": "Breakout: +58.4% in 3M, +16.5% in 1M",
-      "warning": "Low AI rating"
-    },
-    {
-      "ticker": "UCTT",
-      "price": 56.25,
-      "rating": 5,
-      "momentum_6m": 129.59,
-      "catalyst": "Breakout: +109.7% in 3M, +10.8% in 1M",
-      "warning": "Low AI rating"
-    },
-    {
-      "ticker": "VRT",
-      "price": 270.06,
-      "rating": 6,
-      "momentum_6m": 115.19,
-      "catalyst": "Breakout: +45.5% in 3M, +33.7% in 1M",
-      "warning": null
-    },
-    {
-      "ticker": "VNDA",
-      "price": 9.56,
-      "rating": 5,
-      "momentum_6m": 111.97,
-      "catalyst": "Breakout: +55.7% in 3M, +27.3% in 1M",
-      "warning": "Low AI rating"
-    }
+    { "ticker": "WDC",  "price": 282.64, "rating": 5, "momentum_6m": 277.67, "catalyst": "Breakout: +72.9% in 3M, +50.6% in 1M", "warning": "Low AI rating" },
+    { "ticker": "MU",   "price": 394.73, "rating": 7, "momentum_6m": 232.33, "catalyst": "Breakout: +65.7% in 3M, +20.7% in 1M", "warning": null },
+    { "ticker": "ACMR", "price": 62.45,  "rating": 7, "momentum_6m": 160.99, "catalyst": "Breakout: +102.1% in 3M, +27.0% in 1M", "warning": null },
+    { "ticker": "CENX", "price": 52.36,  "rating": 5, "momentum_6m": 127.73, "catalyst": "Breakout: +80.8% in 3M, +21.2% in 1M", "warning": "Low AI rating" },
+    { "ticker": "AMAT", "price": 322.51, "rating": 7, "momentum_6m": 75.30,  "catalyst": "Breakout: +38.4% in 3M, +14.5% in 1M", "warning": null }
   ],
   "top_buy": [
-    {
-      "ticker": "AXTI",
-      "price": 44.3,
-      "rating": 3,
-      "momentum_6m": 1357.24,
-      "catalyst": "Breakout: +248.5% in 3M, +59.5% in 1M",
-      "warning": "Downgraded (rating 3.0 < 5.0)"
-    },
-    {
-      "ticker": "SNDK",
-      "price": 618.89,
-      "rating": 4,
-      "momentum_6m": 777.73,
-      "catalyst": "Strong momentum: +777.7% in 6M",
-      "warning": "Low AI rating"
-    },
-    {
-      "ticker": "HYMC",
-      "price": 44.85,
-      "rating": 2,
-      "momentum_6m": 685.46,
-      "catalyst": "Breakout: +297.6% in 3M, +15.7% in 1M",
-      "warning": "Downgraded (rating 2.0 < 5.0)"
-    },
-    {
-      "ticker": "ALMS",
-      "price": 28.1,
-      "rating": 2,
-      "momentum_6m": 558.08,
-      "catalyst": "Strong momentum: +558.1% in 6M",
-      "warning": "Low AI rating"
-    },
-    {
-      "ticker": "CAPR",
-      "price": 33.4,
-      "rating": 2,
-      "momentum_6m": 415.43,
-      "catalyst": "Strong momentum: +415.4% in 6M",
-      "warning": "Low AI rating"
-    }
+    { "ticker": "LITE", "price": 552.00, "rating": 4, "momentum_6m": 374.75, "catalyst": "Breakout: +130.3% in 3M, +58.5% in 1M", "warning": "Downgrade" },
+    { "ticker": "ARWR", "price": 64.48,  "rating": 2, "momentum_6m": 292.94, "catalyst": "Strong momentum: +292.9% in 6M", "warning": "Low AI rating" },
+    { "ticker": "ALM",  "price": 14.11,  "rating": 1, "momentum_6m": 242.23, "catalyst": "Breakout: +120.0% in 3M, +51.5% in 1M", "warning": "Downgrade" },
+    { "ticker": "CIFR", "price": 14.71,  "rating": 3, "momentum_6m": 210.11, "catalyst": "Strong momentum: +210.1% in 6M", "warning": "Low AI rating" },
+    { "ticker": "HL",   "price": 22.78,  "rating": 4, "momentum_6m": 199.85, "catalyst": "Breakout: +199.9% in 6M", "warning": "Low AI rating" }
   ],
-  "last_updated": "Mar 10, 2026 \u00b7 06:03 PM"
+  "last_updated": "Feb 08, 2026 · 12:35 PM"
 }
