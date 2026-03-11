@@ -577,7 +577,7 @@
             <span class="signal-section-title"><span class="icon">⭐</span> Top Strong Buy Signals</span>
             <span style="display:flex;align-items:center;gap:8px;">
               <span class="signal-count-badge green" id="ss-sb-count">—</span>
-              <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-faint);letter-spacing:0.5px;">sorted by momentum</span>
+              <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-faint);letter-spacing:0.5px;">sorted by rating</span>
             </span>
           </div>
           <div class="signal-table-wrap tier-strong">
@@ -712,7 +712,12 @@
     document.getElementById('ts-updated').textContent = 'Last updated: ' + s.last_updated;
     if (s.inception_date) {
       var el = document.getElementById('ts-inception');
-      if (el) el.textContent = 'Since ' + s.inception_date;
+      if (el) {
+        // Format "Jan 01, 2025" → "Jan 2025" (drop the day)
+        var dateParts = s.inception_date.split(' ');
+        var shortDate = dateParts.length >= 3 ? dateParts[0] + ' ' + dateParts[2].replace(',','') : s.inception_date;
+        el.textContent = 'Tracking since ' + shortDate;
+      }
     }
 
     document.getElementById('ts-grid-1').classList.remove('loading');
