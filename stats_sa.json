@@ -1,172 +1,172 @@
 {
-  "stocks_scanned": 118174,
-  "strong_buy_count": 17992,
-  "buy_count": 86052,
-  "watch_count": 14130,
+  "stocks_scanned": 1349,
+  "strong_buy_count": 189,
+  "buy_count": 1014,
+  "watch_count": 146,
   "scan_universe": "S&P 500 + NASDAQ",
   "top_strong_buy": [
     {
       "ticker": "ODFL",
-      "price": 210.68,
+      "price": 187.12,
       "rating": 8,
-      "momentum_6m": 42.06,
-      "catalyst": "Quality+Momentum: 8.0 rating, +42.1% in 6M",
-      "warning": null
-    },
-    {
-      "ticker": "AAPL",
-      "price": 278.78,
-      "rating": 8,
-      "momentum_6m": 41.93,
-      "catalyst": "Quality+Momentum: 8.0 rating, +41.9% in 6M",
-      "warning": null
-    },
-    {
-      "ticker": "PLD",
-      "price": 141.77,
-      "rating": 8,
-      "momentum_6m": 36.71,
-      "catalyst": "Quality+Momentum: 8.0 rating, +36.7% in 6M",
-      "warning": null
-    },
-    {
-      "ticker": "NVDA",
-      "price": 184.97,
-      "rating": 8,
-      "momentum_6m": 29.52,
-      "catalyst": "Quality+Momentum: 8.0 rating, +29.5% in 6M",
-      "warning": null
-    },
-    {
-      "ticker": "PHM",
-      "price": 126.99,
-      "rating": 8,
-      "momentum_6m": 28.71,
-      "catalyst": "Quality+Momentum: 8.0 rating, +28.7% in 6M",
+      "momentum_6m": 29.05,
+      "catalyst": "Quality+Momentum",
       "warning": null
     },
     {
       "ticker": "CPRX",
-      "price": 24.45,
+      "price": 24.47,
       "rating": 8,
-      "momentum_6m": 24.24,
-      "catalyst": "Quality+Momentum: 8.0 rating, +24.2% in 6M",
+      "momentum_6m": 23.85,
+      "catalyst": "Quality+Momentum",
+      "warning": null
+    },
+    {
+      "ticker": "PLD",
+      "price": 134.93,
+      "rating": 8,
+      "momentum_6m": 23.64,
+      "catalyst": "Quality+Momentum",
       "warning": null
     },
     {
       "ticker": "CME",
-      "price": 319.09,
+      "price": 304.37,
       "rating": 8,
-      "momentum_6m": 22.67,
-      "catalyst": "Quality+Momentum: 8.0 rating, +22.7% in 6M",
+      "momentum_6m": 17.67,
+      "catalyst": "Quality+Momentum",
       "warning": null
     },
     {
-      "ticker": "CROX",
-      "price": 99.92,
-      "rating": 8,
-      "momentum_6m": 20.56,
-      "catalyst": "Breakout: +36.1% in 3M, +20.3% in 1M",
+      "ticker": "MU",
+      "price": 415.17,
+      "rating": 7,
+      "momentum_6m": 197.37,
+      "catalyst": "Breakout: +64.8% in 3M, +11.4% in 1M",
       "warning": null
     },
     {
-      "ticker": "JPM",
-      "price": 315.04,
-      "rating": 8,
-      "momentum_6m": 20.31,
-      "catalyst": "Quality+Momentum: 8.0 rating, +20.3% in 6M",
+      "ticker": "AMAT",
+      "price": 349.88,
+      "rating": 7,
+      "momentum_6m": 112.23,
+      "catalyst": "Quality+Momentum",
       "warning": null
     },
     {
-      "ticker": "DECK",
-      "price": 119.34,
-      "rating": 8,
-      "momentum_6m": 15.38,
-      "catalyst": "Breakout: +47.4% in 3M, +15.0% in 1M",
+      "ticker": "LRCX",
+      "price": 221.01,
+      "rating": 7,
+      "momentum_6m": 106.66,
+      "catalyst": "Quality+Momentum",
+      "warning": null
+    },
+    {
+      "ticker": "NXT",
+      "price": 115.91,
+      "rating": 7,
+      "momentum_6m": 76.79,
+      "catalyst": "Quality+Momentum",
+      "warning": null
+    },
+    {
+      "ticker": "ASML",
+      "price": 1392.3,
+      "rating": 7,
+      "momentum_6m": 72.36,
+      "catalyst": "Quality+Momentum",
+      "warning": null
+    },
+    {
+      "ticker": "CAT",
+      "price": 712.35,
+      "rating": 7,
+      "momentum_6m": 72.31,
+      "catalyst": "Quality+Momentum",
       "warning": null
     }
   ],
   "top_buy": [
     {
-      "ticker": "SNDK",
-      "price": 695.51,
-      "rating": 4,
-      "momentum_6m": 1558.74,
-      "catalyst": "Breakout: +236.0% in 3M, +153.8% in 1M",
-      "warning": "Downgraded"
-    },
-    {
-      "ticker": "HYMC",
-      "price": 54.85,
-      "rating": 2,
-      "momentum_6m": 1471.63,
-      "catalyst": "Breakout: +712.6% in 3M, +119.3% in 1M",
-      "warning": "Downgraded"
-    },
-    {
       "ticker": "AXTI",
-      "price": 44.3,
+      "price": 43.92,
       "rating": 3,
       "momentum_6m": 1357.24,
       "catalyst": "Breakout: +248.5% in 3M, +59.5% in 1M",
       "warning": "Downgraded"
     },
     {
-      "ticker": "OPEN",
-      "price": 7.15,
+      "ticker": "SNDK",
+      "price": 627.58,
+      "rating": 4,
+      "momentum_6m": 777.73,
+      "catalyst": "Strong momentum",
+      "warning": "Low AI rating"
+    },
+    {
+      "ticker": "PRAX",
+      "price": 314.96,
       "rating": 3,
-      "momentum_6m": 1163.25,
-      "catalyst": "Strong momentum: +1163.3% in 6M",
+      "momentum_6m": 674.19,
+      "catalyst": "Strong momentum",
+      "warning": "Low AI rating"
+    },
+    {
+      "ticker": "HYMC",
+      "price": 42.68,
+      "rating": 2,
+      "momentum_6m": 656.55,
+      "catalyst": "Breakout: +275.7% in 3M, +19.7% in 1M",
+      "warning": "Downgraded"
+    },
+    {
+      "ticker": "ALMS",
+      "price": 27.53,
+      "rating": 2,
+      "momentum_6m": 558.08,
+      "catalyst": "Strong momentum",
       "warning": "Low AI rating"
     },
     {
       "ticker": "TERN",
-      "price": 45.0,
+      "price": 45.35,
       "rating": 2,
-      "momentum_6m": 1022.19,
-      "catalyst": "Breakout: +516.4% in 3M, +117.1% in 1M",
-      "warning": "Downgraded"
-    },
-    {
-      "ticker": "CDTX",
-      "price": 220.31,
-      "rating": 3,
-      "momentum_6m": 948.1,
-      "catalyst": "Strong momentum: +948.1% in 6M",
+      "momentum_6m": 499.87,
+      "catalyst": "Strong momentum",
       "warning": "Low AI rating"
     },
     {
-      "ticker": "FNGD",
-      "price": 62.26,
+      "ticker": "VTYX",
+      "price": 14.0,
       "rating": 2,
-      "momentum_6m": 922.49,
-      "catalyst": "Breakout: +1198.4% in 3M, +1084.4% in 1M",
-      "warning": "Downgraded"
+      "momentum_6m": 455.56,
+      "catalyst": "Strong momentum",
+      "warning": "Low AI rating"
     },
     {
-      "ticker": "GLTO",
-      "price": 32.0,
-      "rating": 3,
-      "momentum_6m": 865.31,
-      "catalyst": "Breakout: +1063.6% in 3M, +14.9% in 1M",
-      "warning": "Downgraded"
-    },
-    {
-      "ticker": "CELC",
-      "price": 108.8,
+      "ticker": "CAPR",
+      "price": 32.98,
       "rating": 2,
-      "momentum_6m": 763.88,
-      "catalyst": "Breakout: +102.8% in 3M, +25.2% in 1M",
+      "momentum_6m": 415.43,
+      "catalyst": "Strong momentum",
+      "warning": "Low AI rating"
+    },
+    {
+      "ticker": "AAOI",
+      "price": 120.39,
+      "rating": 3,
+      "momentum_6m": 407.97,
+      "catalyst": "Breakout: +332.8% in 3M, +151.5% in 1M",
       "warning": "Downgraded"
     },
     {
-      "ticker": "OLMA",
-      "price": 35.93,
-      "rating": 3,
-      "momentum_6m": 759.19,
-      "catalyst": "Breakout: +356.3% in 3M, +353.4% in 1M",
-      "warning": "Downgraded"
+      "ticker": "RAPT",
+      "price": 58.02,
+      "rating": 2,
+      "momentum_6m": 348.61,
+      "catalyst": "Strong momentum",
+      "warning": "Low AI rating"
     }
   ],
-  "last_updated": "Mar 11, 2026 \u00b7 05:18 PM"
+  "last_updated": "Mar 11, 2026 \u00b7 05:39 PM"
 }
