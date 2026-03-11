@@ -6,8 +6,9 @@
   "profit_factor": 1.15,
   "best_trade": 109.0,
   "trades_this_week": 76,
-  "max_drawdown": -10.4,
+  "max_drawdown": -56.9,
   "open_positions": 41,
   "version": "18.18",
-  "last_updated": "Mar 11, 2026 \u00b7 05:06 PM"
+  "inception_date": "Jan 01, 2025",
+  "last_updated": "Mar 11, 2026 \u00b7 05:18 PM"
 }
