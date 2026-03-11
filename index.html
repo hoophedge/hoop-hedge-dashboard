@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>HoopHedge — Automated Trading Signals</title>
 <meta name="description" content="Automated trading signal system — Swing trading with AI-powered analysis">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏀</text></svg>">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏀</text></svg>">
+<link rel="alternate icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAI9SURBVFhH7ZY9aBRBFMffbHZ3b/dyuSRGMUYFBUEQrBQLC0ELC8FCsPADCxsLG8FCsLIQC8HCwsLCwsJCsLAQLASxECwEIRCCIIiCIIiCICiKoiiKoqiKoiiKoh9Z3t7tzd77ve/NvNndJCT5g8e8N/Nm5s3MezMhhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYT4fxBFURLHcRzHcRzHcRzHcRzHcRzHcRzHcRzHcRzHcRzHcRzHcRzHcRzHcRzHcZx+nudJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJ0h8AAAD/ADS2hgAAAABJRU5ErkJggg==">
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
 
@@ -73,10 +74,10 @@
   }
 
   /* ── Hero ── */
-  .hero { text-align: center; margin-bottom: 40px; padding-top: 64px; }
+  .hero { text-align: center; margin-bottom: 16px; padding-top: 20px; }
   .hero h1 {
-    font-size: 48px; font-weight: 800; color: var(--white);
-    letter-spacing: -1.5px; line-height: 1.1; margin-bottom: 16px;
+    font-size: 34px; font-weight: 800; color: var(--white);
+    letter-spacing: -1.5px; line-height: 1.1; margin-bottom: 8px;
   }
   .hero h1 span {
     background: linear-gradient(135deg, var(--green), var(--cyan));
@@ -84,15 +85,15 @@
   }
   .tagline {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 13px; font-weight: 500;
+    font-size: 12px; font-weight: 500;
     letter-spacing: 3px; text-transform: uppercase;
-    color: var(--text-dim); margin-top: 20px;
+    color: var(--text-dim); margin-top: 8px;
   }
 
   /* ── Toggle ── */
   .toggle-wrapper {
     display: flex; justify-content: center;
-    margin-bottom: 48px;
+    margin-bottom: 24px;
   }
   .toggle-container {
     display: flex;
@@ -343,6 +344,9 @@
   .momentum-cell {
     font-family: 'JetBrains Mono', monospace; font-weight: 600; color: var(--green);
   }
+  .momentum-cell-neg {
+    font-family: 'JetBrains Mono', monospace; font-weight: 600; color: var(--red);
+  }
 
   /* Catalyst */
   .catalyst-cell { font-size: 13px; color: var(--text-dim); line-height: 1.4; }
@@ -432,12 +436,12 @@
   }
   .footer-socials a { color: var(--text-faint); transition: color 0.2s ease; }
   .footer-socials a:hover { color: var(--text); }
-  .footer-socials a svg { width: 16px; height: 16px; fill: currentColor; display: block; }
+  .footer-socials a svg { width: 20px; height: 20px; fill: currentColor; display: block; }
 
   /* ── Responsive ── */
   @media (max-width: 700px) {
     .container { padding: 0 16px; }
-    .hero h1 { font-size: 32px; }
+    .hero h1 { font-size: 28px; }
     .stats-grid { grid-template-columns: 1fr 1fr; }
     .section { margin-bottom: 40px; }
     .stat-value { font-size: 22px; }
@@ -499,7 +503,7 @@
             <div class="stat-value green" id="ts-winrate">—</div>
           </div>
           <div class="stat-card green-accent">
-            <div class="stat-label">Cumulative P&L</div>
+            <div class="stat-label">Cumulative P&amp;L</div>
             <div class="stat-value green" id="ts-pnl">—</div>
           </div>
           <div class="stat-card green-accent">
@@ -571,7 +575,10 @@
         <div class="signal-section">
           <div class="signal-section-header">
             <span class="signal-section-title"><span class="icon">⭐</span> Top Strong Buy Signals</span>
-            <span class="signal-count-badge green" id="ss-sb-count">—</span>
+            <span style="display:flex;align-items:center;gap:8px;">
+              <span class="signal-count-badge green" id="ss-sb-count">—</span>
+              <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-faint);letter-spacing:0.5px;">sorted by momentum</span>
+            </span>
           </div>
           <div class="signal-table-wrap tier-strong">
             <table class="signal-table">
@@ -596,7 +603,10 @@
         <div class="signal-section">
           <div class="signal-section-header">
             <span class="signal-section-title"><span class="icon">📈</span> Top Buy Signals</span>
-            <span class="signal-count-badge blue" id="ss-buy-count">—</span>
+            <span style="display:flex;align-items:center;gap:8px;">
+              <span class="signal-count-badge blue" id="ss-buy-count">—</span>
+              <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-faint);letter-spacing:0.5px;">sorted by momentum</span>
+            </span>
           </div>
           <div class="signal-table-wrap tier-buy">
             <table class="signal-table">
@@ -657,6 +667,7 @@
     document.querySelector('.toggle-btn[data-view="' + view + '"]').classList.add('active');
     document.querySelectorAll('.dashboard-view').forEach(v => v.classList.remove('active'));
     document.getElementById('view-' + view).classList.add('active');
+    document.title = view === 'trading' ? 'HoopHedge — Trading Signals' : 'HoopHedge — Stock Signals';
     try { history.replaceState(null, '', view === 'trading' ? '#' : '#' + view); } catch(e) {}
   }
 
@@ -759,7 +770,7 @@
         '<td class="ticker-cell"><a class="ticker-link" href="https://finviz.com/quote.ashx?t=' + s.ticker + '" target="_blank" rel="noopener">' + s.ticker + '</a></td>' +
         '<td class="price-cell right">$' + s.price.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2}) + '</td>' +
         '<td class="right">' + scorePill(s.rating) + '</td>' +
-        '<td class="momentum-cell right">+' + s.momentum_6m.toFixed(1) + '%</td>' +
+        '<td class="' + (s.momentum_6m >= 0 ? 'momentum-cell' : 'momentum-cell-neg') + ' right">' + (s.momentum_6m >= 0 ? '+' : '') + s.momentum_6m.toFixed(1) + '%</td>' +
         '<td class="catalyst-cell">' + formatCatalyst(s.catalyst, s.warning) + '</td>' +
       '</tr>';
     }).join('');
