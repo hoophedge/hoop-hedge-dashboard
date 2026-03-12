@@ -44,46 +44,6 @@
       "momentum_6m": 197.37,
       "catalyst": "Breakout: +64.8% in 3M, +11.4% in 1M",
       "warning": null
-    },
-    {
-      "ticker": "AMAT",
-      "price": 349.88,
-      "rating": 7,
-      "momentum_6m": 112.23,
-      "catalyst": "Quality+Momentum",
-      "warning": null
-    },
-    {
-      "ticker": "LRCX",
-      "price": 221.01,
-      "rating": 7,
-      "momentum_6m": 106.66,
-      "catalyst": "Quality+Momentum",
-      "warning": null
-    },
-    {
-      "ticker": "NXT",
-      "price": 115.91,
-      "rating": 7,
-      "momentum_6m": 76.79,
-      "catalyst": "Quality+Momentum",
-      "warning": null
-    },
-    {
-      "ticker": "ASML",
-      "price": 1392.3,
-      "rating": 7,
-      "momentum_6m": 72.36,
-      "catalyst": "Quality+Momentum",
-      "warning": null
-    },
-    {
-      "ticker": "CAT",
-      "price": 712.35,
-      "rating": 7,
-      "momentum_6m": 72.31,
-      "catalyst": "Quality+Momentum",
-      "warning": null
     }
   ],
   "top_buy": [
@@ -126,47 +86,7 @@
       "momentum_6m": 558.08,
       "catalyst": "Strong momentum",
       "warning": "Low AI rating"
-    },
-    {
-      "ticker": "TERN",
-      "price": 45.35,
-      "rating": 2,
-      "momentum_6m": 499.87,
-      "catalyst": "Strong momentum",
-      "warning": "Low AI rating"
-    },
-    {
-      "ticker": "VTYX",
-      "price": 14.0,
-      "rating": 2,
-      "momentum_6m": 455.56,
-      "catalyst": "Strong momentum",
-      "warning": "Low AI rating"
-    },
-    {
-      "ticker": "CAPR",
-      "price": 32.98,
-      "rating": 2,
-      "momentum_6m": 415.43,
-      "catalyst": "Strong momentum",
-      "warning": "Low AI rating"
-    },
-    {
-      "ticker": "AAOI",
-      "price": 120.39,
-      "rating": 3,
-      "momentum_6m": 407.97,
-      "catalyst": "Breakout: +332.8% in 3M, +151.5% in 1M",
-      "warning": "Downgraded"
-    },
-    {
-      "ticker": "RAPT",
-      "price": 58.02,
-      "rating": 2,
-      "momentum_6m": 348.61,
-      "catalyst": "Strong momentum",
-      "warning": "Low AI rating"
     }
   ],
-  "last_updated": "Mar 11, 2026 \u00b7 06:55 PM"
+  "last_updated": "Mar 11, 2026 \u00b7 08:50 PM"
 }
