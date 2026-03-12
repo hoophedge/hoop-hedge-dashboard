@@ -5,8 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>HoopHedge — Automated Trading Signals</title>
 <meta name="description" content="Automated trading signal system — Swing trading with AI-powered analysis">
+
+<!-- Open Graph / social preview -->
+<meta property="og:type"        content="website">
+<meta property="og:url"         content="https://www.hoophedge.com/">
+<meta property="og:title"       content="HoopHedge — Automated Trading Signals">
+<meta property="og:description" content="AI-powered stock signals scanning 1,300+ tickers daily. View live Strong Buy and Buy signals updated each trading day.">
+<meta property="og:image"       content="https://www.hoophedge.com/og-preview.png">
+<meta name="twitter:card"        content="summary_large_image">
+<meta name="twitter:title"       content="HoopHedge — Automated Trading Signals">
+<meta name="twitter:description" content="AI-powered stock signals scanning 1,300+ tickers daily.">
+<meta name="twitter:image"       content="https://www.hoophedge.com/og-preview.png">
+
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏀</text></svg>">
 <link rel="alternate icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAI9SURBVFhH7ZY9aBRBFMffbHZ3b/dyuSRGMUYFBUEQrBQLC0ELC8FCsPADCxsLG8FCsLIQC8HCwsLCwsJCsLAQLASxECwEIRCCIIiCIIiCICiKoiiKoqiKoiiKoh9Z3t7tzd77ve/NvNndJCT5g8e8N/Nm5s3MezMhhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYT4fxBFURLHcRzHcRzHcRzHcRzHcRzHcRzHcRzHcRzHcRzHcRzHcRzHcRzHcRzHcZx+nudJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJ0h8AAAD/ADS2hgAAAABJRU5ErkJggg==">
+<!-- Apple touch icon for iPhone home screen -->
+<link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAI9SURBVFhH7ZY9aBRBFMffbHZ3b/dyuSRGMUYFBUEQrBQLC0ELC8FCsPADCxsLG8FCsLIQLASxECwEIRCCIIiCIIiCICiKoiiKoiiKoiiKoh9Z3t7tzd77ve/NvNndJCT5g8e8N/Nm5s3MezMhhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYT4fxBFURLHcRzHcRzHcRzHcRzHcRzHcRzHcRzHcRzHcRzHcRzHcRzHcRzHcRzHcZx+nudJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJ0h8AAAD/ADS2hgAAAABJRU5ErkJggg==">
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
 
@@ -329,6 +343,17 @@
     font-family: 'JetBrains Mono', monospace; font-weight: 500; color: var(--text);
   }
 
+  .strip-delta {
+    font-size: 10px;
+    font-weight: 600;
+    margin-left: 3px;
+    vertical-align: middle;
+    opacity: 0.85;
+  }
+  .strip-delta.up   { color: var(--green); }
+  .strip-delta.down { color: var(--red); }
+  .strip-delta.flat { color: var(--text-faint); }
+
   /* HoopScore tooltip */
   .hs-info {
     display: inline-flex;
@@ -556,37 +581,37 @@
         </div>
         <div class="stats-grid loading" id="ts-grid-1">
           <div class="stat-card green-accent">
-            <div class="stat-label">Closed Trades</div>
+            <div class="stat-label">Closed Trades <span class="hs-info" data-tip="Total number of completed trades since inception">?</span></div>
             <div class="stat-value" id="ts-trades">—</div>
           </div>
           <div class="stat-card green-accent">
-            <div class="stat-label">Win Rate</div>
+            <div class="stat-label">Win Rate <span class="hs-info" data-tip="% of trades closed at a profit · 45%+ is strong for a momentum system">?</span></div>
             <div class="stat-value green" id="ts-winrate">—</div>
           </div>
           <div class="stat-card green-accent">
-            <div class="stat-label">Cumulative P&amp;L</div>
+            <div class="stat-label">Cumulative P&amp;L <span class="hs-info" data-tip="Total return across all closed trades since inception">?</span></div>
             <div class="stat-value green" id="ts-pnl">—</div>
           </div>
           <div class="stat-card green-accent">
-            <div class="stat-label">Avg Return / Trade</div>
+            <div class="stat-label">Avg Return / Trade <span class="hs-info" data-tip="Average % gain or loss per closed trade">?</span></div>
             <div class="stat-value green" id="ts-avg">—</div>
           </div>
         </div>
         <div class="stats-grid loading" id="ts-grid-2" style="margin-top:12px;">
           <div class="stat-card blue-accent">
-            <div class="stat-label">Profit Factor</div>
+            <div class="stat-label">Profit Factor <span class="hs-info" data-tip="Gross profit ÷ gross loss · Above 1.0 means the system is net profitable">?</span></div>
             <div class="stat-value blue" id="ts-pf">—</div>
           </div>
           <div class="stat-card green-accent">
-            <div class="stat-label">Best Trade</div>
+            <div class="stat-label">Best Trade <span class="hs-info" data-tip="Highest single-trade return since inception">?</span></div>
             <div class="stat-value green" id="ts-best">—</div>
           </div>
           <div class="stat-card cyan-accent">
-            <div class="stat-label">Trades This Week</div>
+            <div class="stat-label">Trades This Week <span class="hs-info" data-tip="Number of trades opened or closed in the current week">?</span></div>
             <div class="stat-value cyan" id="ts-weekly">—</div>
           </div>
           <div class="stat-card red-accent">
-            <div class="stat-label">Max Drawdown</div>
+            <div class="stat-label">Max Drawdown <span class="hs-info" data-tip="Largest peak-to-trough decline in cumulative P&L — measures worst-case loss period">?</span></div>
             <div class="stat-value red" id="ts-dd">—</div>
           </div>
         </div>
@@ -621,14 +646,17 @@
           <div class="stat-strip-divider"></div>
           <div class="stat-strip-item">
             <span class="strip-value green" id="ss-strongbuy">—</span> Strong Buy
+            <span class="strip-delta" id="ss-delta-strongbuy"></span>
           </div>
           <div class="stat-strip-divider"></div>
           <div class="stat-strip-item">
             <span class="strip-value blue" id="ss-buy">—</span> Buy
+            <span class="strip-delta" id="ss-delta-buy"></span>
           </div>
           <div class="stat-strip-divider"></div>
           <div class="stat-strip-item">
             <span class="strip-value" id="ss-watch">—</span> Watch
+            <span class="strip-delta" id="ss-delta-watch"></span>
           </div>
         </div>
 
@@ -867,6 +895,17 @@
     document.getElementById('ss-buy').textContent = s.buy_count.toLocaleString();
     document.getElementById('ss-watch').textContent = s.watch_count.toLocaleString();
 
+    // Delta indicators ▲▼
+    function renderDelta(id, delta) {
+      var el = document.getElementById(id);
+      if (!el || delta === null || delta === undefined) return;
+      if (delta > 0)      { el.textContent = '▲' + delta; el.className = 'strip-delta up'; }
+      else if (delta < 0) { el.textContent = '▼' + Math.abs(delta); el.className = 'strip-delta down'; }
+      else                { el.textContent = '—'; el.className = 'strip-delta flat'; }
+    }
+    renderDelta('ss-delta-strongbuy', s.delta_strongbuy);
+    renderDelta('ss-delta-buy',       s.delta_buy);
+    renderDelta('ss-delta-watch',     s.delta_watch);
     var metaRow = document.getElementById('ss-meta-row');
     if (s.scan_universe) {
       document.getElementById('ss-universe').textContent = s.scan_universe;
