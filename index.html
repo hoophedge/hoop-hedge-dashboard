@@ -329,6 +329,48 @@
     font-family: 'JetBrains Mono', monospace; font-weight: 500; color: var(--text);
   }
 
+  /* HoopScore tooltip */
+  .hs-info {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 13px; height: 13px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.12);
+    color: var(--text-faint);
+    font-size: 9px;
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    cursor: default;
+    position: relative;
+    margin-left: 4px;
+    vertical-align: middle;
+    line-height: 1;
+  }
+  .hs-info::after {
+    content: attr(data-tip);
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: #1e2a38;
+    border: 1px solid var(--border-bright);
+    color: var(--text-dim);
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 1.5;
+    white-space: nowrap;
+    padding: 7px 10px;
+    border-radius: 6px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.15s;
+    z-index: 100;
+  }
+  .hs-info:hover::after { opacity: 1; }
+
   /* HoopScore pill */
   .score-pill {
     display: inline-flex; align-items: center; justify-content: center;
@@ -603,12 +645,7 @@
                   <th class="col-rank">#</th>
                   <th class="col-ticker">Ticker</th>
                   <th class="col-price right">Price</th>
-                  <th class="col-score right">HoopScore</th>
-                  <th class="col-momentum right">6M Return</th>
-                  <th class="col-catalyst-head">Catalyst</th>
-                </tr>
-              </thead>
-              <tbody id="ss-tbody-strongbuy">
+                  <th class="col-score right">HoopScore <span class="hs-info" data-tip="AI-generated quality score · 1–10 scale · Higher = stronger fundamentals &amp; momentum">i</span></th>
                 <tr><td colspan="6" style="text-align:center;color:var(--text-faint);padding:24px;">Loading signals...</td></tr>
               </tbody>
             </table>
@@ -631,12 +668,7 @@
                   <th class="col-rank">#</th>
                   <th class="col-ticker">Ticker</th>
                   <th class="col-price right">Price</th>
-                  <th class="col-score right">HoopScore</th>
-                  <th class="col-momentum right">6M Return</th>
-                  <th class="col-catalyst-head">Catalyst</th>
-                </tr>
-              </thead>
-              <tbody id="ss-tbody-buy">
+                  <th class="col-score right">HoopScore <span class="hs-info" data-tip="AI-generated quality score · 1–10 scale · Higher = stronger fundamentals &amp; momentum">i</span></th>
                 <tr><td colspan="6" style="text-align:center;color:var(--text-faint);padding:24px;">Loading signals...</td></tr>
               </tbody>
             </table>
@@ -761,8 +793,49 @@
     last_updated: "Feb 08, 2026 · 12:35 PM"
   };
 
+  /* HoopScore tooltip */
+  .hs-info {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 13px; height: 13px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.12);
+    color: var(--text-faint);
+    font-size: 9px;
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    cursor: default;
+    position: relative;
+    margin-left: 4px;
+    vertical-align: middle;
+    line-height: 1;
+  }
+  .hs-info::after {
+    content: attr(data-tip);
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: #1e2a38;
+    border: 1px solid var(--border-bright);
+    color: var(--text-dim);
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 1.5;
+    white-space: nowrap;
+    padding: 7px 10px;
+    border-radius: 6px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.15s;
+    z-index: 100;
+  }
+  .hs-info:hover::after { opacity: 1; }
+
   /* HoopScore pill */
-  function scorePill(rating) {
     var tier = rating >= 7 ? 'high' : (rating >= 4 ? 'mid' : 'low');
     return '<span class="score-pill ' + tier + '">' + rating + '/10</span>';
   }
