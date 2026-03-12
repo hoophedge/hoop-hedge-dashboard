@@ -299,7 +299,7 @@
   .signal-table thead th.col-rank { width: 42px; text-align: center; }
   .signal-table thead th.col-ticker { width: 80px; }
   .signal-table thead th.col-price { width: 100px; }
-  .signal-table thead th.col-score { width: 105px; }
+  .signal-table thead th.col-score { width: 120px; white-space: nowrap; }
   .signal-table thead th.col-momentum { width: 100px; }
 
   .signal-table tbody tr { transition: background 0.15s; }
@@ -344,6 +344,7 @@
     font-weight: 700;
     cursor: default;
     position: relative;
+    top: -1px;
     margin-left: 4px;
     vertical-align: middle;
     line-height: 1;
@@ -792,48 +793,6 @@
     ],
     last_updated: "Feb 08, 2026 · 12:35 PM"
   };
-
-  /* HoopScore tooltip */
-  .hs-info {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 13px; height: 13px;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.12);
-    color: var(--text-faint);
-    font-size: 9px;
-    font-family: sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    cursor: default;
-    position: relative;
-    margin-left: 4px;
-    vertical-align: middle;
-    line-height: 1;
-  }
-  .hs-info::after {
-    content: attr(data-tip);
-    position: absolute;
-    bottom: calc(100% + 8px);
-    left: 50%;
-    transform: translateX(-50%);
-    background: #1e2a38;
-    border: 1px solid var(--border-bright);
-    color: var(--text-dim);
-    font-family: 'Inter', sans-serif;
-    font-size: 11px;
-    font-weight: 400;
-    line-height: 1.5;
-    white-space: nowrap;
-    padding: 7px 10px;
-    border-radius: 6px;
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity 0.15s;
-    z-index: 100;
-  }
-  .hs-info:hover::after { opacity: 1; }
 
   /* HoopScore pill */
     var tier = rating >= 7 ? 'high' : (rating >= 4 ? 'mid' : 'low');
