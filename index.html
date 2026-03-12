@@ -795,6 +795,7 @@
   };
 
   /* HoopScore pill */
+  function scorePill(rating) {
     var tier = rating >= 7 ? 'high' : (rating >= 4 ? 'mid' : 'low');
     return '<span class="score-pill ' + tier + '">' + rating + '/10</span>';
   }
