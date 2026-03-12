@@ -1,91 +1,91 @@
 {
   "stocks_scanned": 4905,
-  "strong_buy_count": 76,
-  "buy_count": 331,
-  "watch_count": 45,
+  "strong_buy_count": 84,
+  "buy_count": 452,
+  "watch_count": 57,
   "top_strong_buy": [
     {
+      "ticker": "LBRT",
+      "price": 30.3,
+      "rating": 5,
+      "momentum_6m": 175.15,
+      "catalyst": "Breakout: +50.6% in 3M, +24.3% in 1M",
+      "warning": "Low AI rating"
+    },
+    {
       "ticker": "MU",
-      "price": 405.64,
+      "price": 405.35,
       "rating": 7,
-      "momentum_6m": 170.09,
-      "catalyst": "Quality+Momentum: 7.0 rating, +170.1% in 6M",
+      "momentum_6m": 169.49,
+      "catalyst": "Quality+Momentum: 7.0 rating, +169.5% in 6M",
       "warning": null
     },
     {
-      "ticker": "CENX",
-      "price": 57.01,
+      "ticker": "DAR",
+      "price": 56.33,
       "rating": 5,
-      "momentum_6m": 159.59,
-      "catalyst": "Breakout: +91.5% in 3M, +11.8% in 1M",
+      "momentum_6m": 76.47,
+      "catalyst": "Breakout: +61.1% in 3M, +13.5% in 1M",
       "warning": "Low AI rating"
     },
     {
       "ticker": "NOK",
-      "price": 8.2,
+      "price": 8.14,
       "rating": 5,
-      "momentum_6m": 77.92,
-      "catalyst": "Breakout: +32.2% in 3M, +12.0% in 1M",
-      "warning": "Low AI rating"
-    },
-    {
-      "ticker": "KRMN",
-      "price": 101.36,
-      "rating": 5,
-      "momentum_6m": 68.5,
-      "catalyst": "Breakout: +64.5% in 3M, +14.9% in 1M",
+      "momentum_6m": 76.19,
+      "catalyst": "Breakout: +30.9% in 3M, +10.9% in 1M",
       "warning": "Low AI rating"
     },
     {
       "ticker": "CF",
-      "price": 128.52,
+      "price": 136,
       "rating": 6,
-      "momentum_6m": 52.03,
-      "catalyst": "Breakout: +71.1% in 3M, +34.3% in 1M",
+      "momentum_6m": 59.69,
+      "catalyst": "Breakout: +79.7% in 3M, +41.1% in 1M",
       "warning": null
     }
   ],
   "top_buy": [
     {
       "ticker": "AXTI",
-      "price": 44.92,
+      "price": 46.73,
       "rating": 3,
-      "momentum_6m": 1279.35,
-      "catalyst": "Breakout: +201.5% in 3M, +74.5% in 1M",
+      "momentum_6m": 1278.47,
+      "catalyst": "Breakout: +201.3% in 3M, +74.4% in 1M",
       "warning": "Downgraded (rating 3.0 < 5.0)"
     },
     {
+      "ticker": "SNDK",
+      "price": 618.82,
+      "rating": 4,
+      "momentum_6m": 634.07,
+      "catalyst": "Strong momentum: +634.1% in 6M",
+      "warning": "Low AI rating"
+    },
+    {
       "ticker": "ALM",
-      "price": 21.14,
+      "price": 21.06,
       "rating": 1,
-      "momentum_6m": 364.54,
-      "catalyst": "Breakout: +210.1% in 3M, +48.7% in 1M",
+      "momentum_6m": 363.88,
+      "catalyst": "Breakout: +209.7% in 3M, +48.5% in 1M",
       "warning": "Downgraded (rating 1.0 < 5.0)"
     },
     {
       "ticker": "AAOI",
-      "price": 109.49,
+      "price": 106.19,
       "rating": 3,
-      "momentum_6m": 316.24,
-      "catalyst": "Breakout: +219.5% in 3M, +130.9% in 1M",
+      "momentum_6m": 295.49,
+      "catalyst": "Breakout: +203.6% in 3M, +119.4% in 1M",
       "warning": "Downgraded (rating 3.0 < 5.0)"
     },
     {
-      "ticker": "EKSO",
-      "price": 11.67,
-      "rating": 3,
-      "momentum_6m": 196.43,
-      "catalyst": "Breakout: +140.1% in 3M, +17.3% in 1M",
-      "warning": "Downgraded (rating 3.0 < 5.0)"
-    },
-    {
-      "ticker": "BE",
-      "price": 158.82,
-      "rating": 5,
-      "momentum_6m": 152.87,
-      "catalyst": "Strong momentum: +152.9% in 6M",
+      "ticker": "LITE",
+      "price": 616.09,
+      "rating": 4,
+      "momentum_6m": 273.66,
+      "catalyst": "Strong momentum: +273.7% in 6M",
       "warning": "Low AI rating"
     }
   ],
-  "last_updated": "Mar 12, 2026 \u00b7 10:17 AM"
+  "last_updated": "Mar 12, 2026 \u00b7 05:58 PM"
 }
