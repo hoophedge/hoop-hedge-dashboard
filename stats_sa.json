@@ -1,91 +1,95 @@
 {
-  "stocks_scanned": 4905,
-  "strong_buy_count": 84,
-  "buy_count": 452,
-  "watch_count": 57,
+  "stocks_scanned": 1492,
+  "strong_buy_count": 235,
+  "buy_count": 1113,
+  "watch_count": 144,
+  "scan_universe": "S&P 500 + NASDAQ",
   "top_strong_buy": [
     {
-      "ticker": "LBRT",
-      "price": 30.3,
-      "rating": 5,
-      "momentum_6m": 175.15,
-      "catalyst": "Breakout: +50.6% in 3M, +24.3% in 1M",
-      "warning": "Low AI rating"
-    },
-    {
-      "ticker": "MU",
-      "price": 405.35,
-      "rating": 7,
-      "momentum_6m": 169.49,
-      "catalyst": "Quality+Momentum: 7.0 rating, +169.5% in 6M",
+      "ticker": "ODFL",
+      "price": 183.9,
+      "rating": 8,
+      "momentum_6m": 29.46,
+      "catalyst": "Quality+Momentum",
       "warning": null
     },
     {
-      "ticker": "DAR",
-      "price": 56.33,
-      "rating": 5,
-      "momentum_6m": 76.47,
-      "catalyst": "Breakout: +61.1% in 3M, +13.5% in 1M",
-      "warning": "Low AI rating"
+      "ticker": "CPRX",
+      "price": 23.9,
+      "rating": 8,
+      "momentum_6m": 23.63,
+      "catalyst": "Quality+Momentum",
+      "warning": null
     },
     {
-      "ticker": "NOK",
-      "price": 8.14,
-      "rating": 5,
-      "momentum_6m": 76.19,
-      "catalyst": "Breakout: +30.9% in 3M, +10.9% in 1M",
-      "warning": "Low AI rating"
+      "ticker": "CME",
+      "price": 311.19,
+      "rating": 8,
+      "momentum_6m": 22.0,
+      "catalyst": "Quality+Momentum",
+      "warning": null
     },
     {
-      "ticker": "CF",
-      "price": 136,
-      "rating": 6,
-      "momentum_6m": 59.69,
-      "catalyst": "Breakout: +79.7% in 3M, +41.1% in 1M",
+      "ticker": "PLD",
+      "price": 131.9,
+      "rating": 8,
+      "momentum_6m": 16.8,
+      "catalyst": "Quality+Momentum",
+      "warning": null
+    },
+    {
+      "ticker": "MU",
+      "price": 405.64,
+      "rating": 7,
+      "momentum_6m": 170.09,
+      "catalyst": "Quality+Momentum",
       "warning": null
     }
   ],
   "top_buy": [
     {
       "ticker": "AXTI",
-      "price": 46.73,
+      "price": 44.92,
       "rating": 3,
-      "momentum_6m": 1278.47,
-      "catalyst": "Breakout: +201.3% in 3M, +74.4% in 1M",
-      "warning": "Downgraded (rating 3.0 < 5.0)"
+      "momentum_6m": 1279.35,
+      "catalyst": "Breakout: +201.5% in 3M, +74.5% in 1M",
+      "warning": "Downgraded"
+    },
+    {
+      "ticker": "PRAX",
+      "price": 303.37,
+      "rating": 3,
+      "momentum_6m": 669.58,
+      "catalyst": "Strong momentum",
+      "warning": "Low AI rating"
     },
     {
       "ticker": "SNDK",
       "price": 618.82,
       "rating": 4,
       "momentum_6m": 634.07,
-      "catalyst": "Strong momentum: +634.1% in 6M",
+      "catalyst": "Strong momentum",
       "warning": "Low AI rating"
     },
     {
-      "ticker": "ALM",
-      "price": 21.06,
-      "rating": 1,
-      "momentum_6m": 363.88,
-      "catalyst": "Breakout: +209.7% in 3M, +48.5% in 1M",
-      "warning": "Downgraded (rating 1.0 < 5.0)"
+      "ticker": "HYMC",
+      "price": 41.02,
+      "rating": 2,
+      "momentum_6m": 588.01,
+      "catalyst": "Breakout: +249.3% in 3M, +13.4% in 1M",
+      "warning": "Downgraded"
     },
     {
-      "ticker": "AAOI",
-      "price": 106.19,
-      "rating": 3,
-      "momentum_6m": 295.49,
-      "catalyst": "Breakout: +203.6% in 3M, +119.4% in 1M",
-      "warning": "Downgraded (rating 3.0 < 5.0)"
-    },
-    {
-      "ticker": "LITE",
-      "price": 616.09,
-      "rating": 4,
-      "momentum_6m": 273.66,
-      "catalyst": "Strong momentum: +273.7% in 6M",
+      "ticker": "ALMS",
+      "price": 25.7,
+      "rating": 2,
+      "momentum_6m": 512.56,
+      "catalyst": "Strong momentum",
       "warning": "Low AI rating"
     }
   ],
-  "last_updated": "Mar 12, 2026 \u00b7 05:58 PM"
+  "last_updated": "Mar 15, 2026 \u00b7 12:10 PM",
+  "delta_strongbuy": 151,
+  "delta_buy": 661,
+  "delta_watch": 87
 }
