@@ -620,7 +620,7 @@
         <div class="stats-footer">
           <span class="updated-text" id="ts-updated">Loading...</span>
           <span style="display:flex;align-items:center;gap:10px;">
-            <span class="open-positions-badge" id="ts-open">— open</span>
+            <span class="open-positions-badge hs-info" id="ts-open" data-tip="Number of currently open trade positions">— open</span>
             <span class="version-tag" id="ts-version">—</span>
           </span>
         </div>
@@ -726,7 +726,6 @@
               <span class="meta-pill" id="ss-duration-tag" style="display:none;">⏱ <span id="ss-duration">—</span></span>
             </span>
           </span>
-          <span class="system-badge">Stock Analyzer</span>
         </div>
 
       </section>
@@ -788,8 +787,14 @@
   document.addEventListener('keydown', function(e) {
     if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
     var current = document.querySelector('.toggle-btn.active')?.dataset.view;
-    if (e.key === 'ArrowLeft'  && current === 'stock')   switchView('trading');
-    if (e.key === 'ArrowRight' && current === 'trading') switchView('stock');
+    if (e.key === 'ArrowLeft' && current === 'stock') {
+      e.preventDefault();
+      switchView('trading');
+    }
+    if (e.key === 'ArrowRight' && current === 'trading') {
+      e.preventDefault();
+      switchView('stock');
+    }
   });
 
   /* ── Trading Signals ── */
@@ -877,7 +882,10 @@
             plugins: { legend: { display: false }, tooltip: {
               mode: 'index', intersect: false,
               callbacks: {
-                title: function(items) { return labels[items[0].dataIndex]; },
+                title: function(items) {
+                  var d = new Date(labels[items[0].dataIndex] + 'T00:00:00');
+                  return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+                },
                 label: function(ctx) { return (ctx.raw >= 0 ? '+' : '') + ctx.raw.toFixed(1) + '%'; }
               }
             }},
@@ -905,6 +913,17 @@
       }
 
       renderEquityChart(s.equity_curve);
+
+      // Show note if all data fits within 3 months
+      var firstDate = new Date(s.equity_curve[0].date);
+      var lastDate  = new Date(s.equity_curve[s.equity_curve.length-1].date);
+      var monthsOfData = (lastDate - firstDate) / (1000 * 60 * 60 * 24 * 30);
+      if (monthsOfData < 3.5) {
+        var note = document.createElement('div');
+        note.style.cssText = 'font-size:10px;color:var(--text-faint);margin-top:6px;text-align:right;';
+        note.textContent = 'Not enough history yet — filters will activate as more data accumulates';
+        document.getElementById('equity-chart-wrap').appendChild(note);
+      }
 
       // Filter buttons
       document.querySelectorAll('.eq-btn').forEach(function(btn) {
