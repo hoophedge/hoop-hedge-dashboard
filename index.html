@@ -744,7 +744,7 @@
       </a>
     </div>
     <span class="footer-brand">HoopHedge</span>
-    <span id="ts-inception" style="display:block;margin-top:8px;font-size:11px;color:var(--text-faint);"></span>
+    <span id="ts-inception" style="display:block;margin-top:8px;font-size:11px;color:var(--text-faint);">Tracking since Jan 2025</span>
   </footer>
 
 </div>
@@ -776,8 +776,7 @@
     closed_trades: 1260, win_rate: 46.0, cumulative_pnl: 279.4,
     avg_return: 0.22, profit_factor: 1.11, best_trade: 34.4,
     trades_this_week: 306, max_drawdown: -56.9, open_positions: 65,
-    version: "18.18", last_updated: "Feb 07, 2026 · 07:48 PM",
-    inception_date: "Jan 01, 2025"
+    version: "18.18", last_updated: "Feb 07, 2026 · 07:48 PM"
   };
 
   async function loadTradingSignals() {
@@ -808,15 +807,7 @@
     document.getElementById('ts-open').textContent = s.open_positions + ' open';
     document.getElementById('ts-version').textContent = 'v' + s.version;
     document.getElementById('ts-updated').textContent = 'Last updated: ' + s.last_updated;
-    if (s.inception_date) {
-      var el = document.getElementById('ts-inception');
-      if (el) {
-        // Format "Jan 01, 2025" → "Jan 2025" (drop the day)
-        var dateParts = s.inception_date.split(' ');
-        var shortDate = dateParts.length >= 3 ? dateParts[0] + ' ' + dateParts[2].replace(',','') : s.inception_date;
-        el.textContent = 'Tracking since ' + shortDate;
-      }
-    }
+
 
     document.getElementById('ts-grid-1').classList.remove('loading');
     document.getElementById('ts-grid-2').classList.remove('loading');
