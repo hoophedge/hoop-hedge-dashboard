@@ -355,6 +355,23 @@
   .strip-delta.down { color: var(--red); }
   .strip-delta.flat { color: var(--text-faint); }
 
+  /* Equity curve filter buttons */
+  .eq-btn {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-dim);
+    font-size: 10px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    letter-spacing: .05em;
+    padding: 3px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .eq-btn:hover { border-color: var(--border-bright); color: var(--text); }
+  .eq-btn.active { border-color: var(--cyan); color: var(--cyan); }
+
   /* HoopScore tooltip */
   .hs-info {
     display: inline-block;
@@ -588,7 +605,15 @@
 
         <!-- Equity Curve Chart -->
         <div id="equity-chart-wrap" style="margin-top:20px;display:none;">
-          <div style="font-size:11px;letter-spacing:.08em;color:var(--text-dim);text-transform:uppercase;margin-bottom:10px;">Cumulative P&amp;L — Equity Curve</div>
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">
+            <div style="font-size:11px;letter-spacing:.08em;color:var(--text-dim);text-transform:uppercase;">Cumulative P&amp;L — Equity Curve</div>
+            <div id="equity-filters" style="display:flex;gap:4px;">
+              <button class="eq-btn" data-range="3M">3M</button>
+              <button class="eq-btn" data-range="6M">6M</button>
+              <button class="eq-btn" data-range="1Y">1Y</button>
+              <button class="eq-btn active" data-range="ALL">All</button>
+            </div>
+          </div>
           <canvas id="equity-chart" height="120"></canvas>
         </div>
 
@@ -759,6 +784,14 @@
 
   if (window.location.hash === '#stock') switchView('stock');
 
+  // Keyboard navigation — left/right arrows switch tabs
+  document.addEventListener('keydown', function(e) {
+    if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+    var current = document.querySelector('.toggle-btn.active')?.dataset.view;
+    if (e.key === 'ArrowLeft'  && current === 'stock')   switchView('trading');
+    if (e.key === 'ArrowRight' && current === 'trading') switchView('stock');
+  });
+
   /* ── Trading Signals ── */
   const TS_FALLBACK = {
     closed_trades: 1260, win_rate: 46.0, cumulative_pnl: 279.4,
@@ -804,47 +837,93 @@
     if (s.equity_curve && s.equity_curve.length > 1) {
       var wrap = document.getElementById('equity-chart-wrap');
       wrap.style.display = 'block';
-      var labels = s.equity_curve.map(function(p) { return p.date; });
-      var values = s.equity_curve.map(function(p) { return p.value; });
-      var isPositive = values[values.length - 1] >= 0;
-      var lineColor = isPositive ? '#22c55e' : '#ef4444';
-      var ctx = document.getElementById('equity-chart').getContext('2d');
-      if (window._equityChart) window._equityChart.destroy();
-      window._equityChart = new Chart(ctx, {
-        type: 'line',
-        data: {
-          labels: labels,
-          datasets: [{
-            data: values,
-            borderColor: lineColor,
-            borderWidth: 2,
-            pointRadius: 0,
-            fill: true,
-            backgroundColor: function(context) {
-              var gradient = context.chart.ctx.createLinearGradient(0, 0, 0, context.chart.height);
-              gradient.addColorStop(0, isPositive ? 'rgba(34,197,94,0.18)' : 'rgba(239,68,68,0.18)');
-              gradient.addColorStop(1, 'rgba(0,0,0,0)');
-              return gradient;
-            },
-            tension: 0.3
-          }]
-        },
-        options: {
-          responsive: true,
-          animation: false,
-          plugins: { legend: { display: false }, tooltip: {
-            mode: 'index', intersect: false,
-            callbacks: { label: function(ctx) { return (ctx.raw >= 0 ? '+' : '') + ctx.raw.toFixed(1) + '%'; } }
-          }},
-          scales: {
-            x: { display: false },
-            y: {
-              grid: { color: 'rgba(255,255,255,0.04)' },
-              ticks: { color: '#6b7280', font: { size: 10 }, callback: function(v) { return (v >= 0 ? '+' : '') + v + '%'; } },
-              border: { display: false }
+      window._equityCurveAll = s.equity_curve;
+
+      function renderEquityChart(curve) {
+        var labels = curve.map(function(p) { return p.date; });
+        var values = curve.map(function(p) { return p.value; });
+        var isPositive = values[values.length - 1] >= 0;
+        var lineColor = isPositive ? '#22c55e' : '#ef4444';
+        var ctx = document.getElementById('equity-chart').getContext('2d');
+        if (window._equityChart) window._equityChart.destroy();
+
+        // X axis: show only first and last date
+        var xLabels = labels.map(function(l, i) {
+          return (i === 0 || i === labels.length - 1) ? l.slice(0, 7) : '';
+        });
+
+        window._equityChart = new Chart(ctx, {
+          type: 'line',
+          data: {
+            labels: xLabels,
+            datasets: [{
+              data: values,
+              borderColor: lineColor,
+              borderWidth: 2,
+              pointRadius: 0,
+              fill: true,
+              backgroundColor: function(context) {
+                var gradient = context.chart.ctx.createLinearGradient(0, 0, 0, context.chart.height);
+                gradient.addColorStop(0, isPositive ? 'rgba(34,197,94,0.18)' : 'rgba(239,68,68,0.18)');
+                gradient.addColorStop(1, 'rgba(0,0,0,0)');
+                return gradient;
+              },
+              tension: 0.3
+            }]
+          },
+          options: {
+            responsive: true,
+            animation: false,
+            plugins: { legend: { display: false }, tooltip: {
+              mode: 'index', intersect: false,
+              callbacks: {
+                title: function(items) { return labels[items[0].dataIndex]; },
+                label: function(ctx) { return (ctx.raw >= 0 ? '+' : '') + ctx.raw.toFixed(1) + '%'; }
+              }
+            }},
+            scales: {
+              x: {
+                display: true,
+                grid: { display: false },
+                ticks: {
+                  color: '#6b7280',
+                  font: { size: 10 },
+                  maxRotation: 0,
+                  autoSkip: false,
+                  callback: function(val, i) { return xLabels[i] || ''; }
+                },
+                border: { display: false }
+              },
+              y: {
+                grid: { color: 'rgba(255,255,255,0.04)' },
+                ticks: { color: '#6b7280', font: { size: 10 }, callback: function(v) { return (v >= 0 ? '+' : '') + v + '%'; } },
+                border: { display: false }
+              }
             }
           }
-        }
+        });
+      }
+
+      renderEquityChart(s.equity_curve);
+
+      // Filter buttons
+      document.querySelectorAll('.eq-btn').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          document.querySelectorAll('.eq-btn').forEach(function(b) { b.classList.remove('active'); });
+          btn.classList.add('active');
+          var range = btn.dataset.range;
+          var full = window._equityCurveAll;
+          var filtered = full;
+          if (range !== 'ALL') {
+            var months = range === '3M' ? 3 : range === '6M' ? 6 : 12;
+            var cutoff = new Date();
+            cutoff.setMonth(cutoff.getMonth() - months);
+            var cutoffStr = cutoff.toISOString().slice(0, 10);
+            filtered = full.filter(function(p) { return p.date >= cutoffStr; });
+            if (filtered.length < 2) filtered = full;
+          }
+          renderEquityChart(filtered);
+        });
       });
     }
   }
